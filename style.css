@@ -57,3 +57,1330 @@ body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
+/* ==========================================
+   GEOMASTER - NY STARTSIDE
+========================================== */
+
+/* Sørg for at skjulte sider faktisk er skjult */
+[hidden] {
+    display: none !important;
+}
+
+.app-view {
+    padding-top: 35px;
+    min-height: 65vh;
+}
+
+/* Toppmeny */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    transition: .2s ease;
+}
+
+.logo:hover {
+    color: #8db4ff;
+}
+
+#homeButton {
+    padding: 10px 17px;
+}
+
+/* Startside */
+.home-view {
+    padding-bottom: 35px;
+}
+
+.home-hero {
+    position: relative;
+    min-height: 320px;
+    padding: 65px 45px 55px;
+    margin: 35px 0 45px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+        radial-gradient(ellipse at 78% 50%, rgba(54, 112, 220, .22), transparent 42%),
+        linear-gradient(125deg, #111f39, #0d172a 70%);
+    border: 1px solid #263c60;
+    border-radius: 24px;
+    box-shadow: 0 22px 65px rgba(0, 0, 0, .2);
+}
+
+.home-hero::before {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    right: 65px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(62, 126, 255, .18),
+        rgba(62, 126, 255, .04) 55%,
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+.home-hero .eyebrow {
+    margin: 0 0 17px;
+}
+
+.home-hero h1 {
+    position: relative;
+    z-index: 1;
+    max-width: 570px;
+    margin: 0 0 18px;
+    font-size: clamp(36px, 5.5vw, 57px);
+    line-height: 1.08;
+    letter-spacing: -2.5px;
+}
+
+.home-hero h1 span {
+    color: #78a5ff;
+}
+
+.home-hero .subtitle {
+    position: relative;
+    z-index: 1;
+    max-width: 450px;
+    font-size: 15px;
+}
+
+.globe-visual {
+    position: absolute;
+    right: 85px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 240px;
+    height: 240px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 155px;
+    filter:
+        drop-shadow(0 0 22px rgba(76, 139, 255, .5))
+        drop-shadow(0 0 55px rgba(76, 139, 255, .2));
+    animation: globeFloat 6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes globeFloat {
+    0%, 100% {
+        transform: translateY(-50%);
+    }
+    50% {
+        transform: translateY(calc(-50% - 10px));
+    }
+}
+
+/* Aktivitetsmeny */
+.home-menu {
+    margin-bottom: 55px;
+}
+
+.home-menu h2 {
+    font-size: 25px;
+    letter-spacing: -.7px;
+    margin: 0 0 7px;
+}
+
+.home-menu > .section-description {
+    margin-bottom: 22px;
+    font-size: 13px;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.home-card {
+    position: relative;
+    min-width: 0;
+    min-height: 112px;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 21px;
+    text-align: left;
+    border: 1px solid #263955;
+    border-radius: 17px;
+    background: linear-gradient(145deg, #131f35, #10192b);
+    color: var(--text);
+    cursor: pointer;
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+.home-card:hover {
+    transform: translateY(-4px);
+    border-color: #5988e4;
+    background: linear-gradient(145deg, #1a2c4b, #121f36);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .2);
+}
+
+.home-card:active {
+    transform: translateY(-1px) scale(.99);
+}
+
+.home-card:focus-visible {
+    outline: 2px solid #78a5ff;
+    outline-offset: 3px;
+}
+
+.home-card-icon {
+    flex: 0 0 53px;
+    width: 53px;
+    height: 53px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #243e68, #192c4a);
+    font-size: 25px;
+}
+
+.home-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.home-card-text strong {
+    font-size: 15px;
+    font-weight: 750;
+}
+
+.home-card-text small {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.home-card-arrow {
+    margin-left: auto;
+    padding-left: 8px;
+    color: #7fa8ff;
+    font-size: 23px;
+    transition: transform .2s ease;
+}
+
+.home-card:hover .home-card-arrow {
+    transform: translateX(4px);
+}
+
+/* Litt ekstra bredde til kartvisningen */
+#mapView .section-heading {
+    margin-bottom: 22px;
+}
+
+#mapView .world-map {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .18);
+}
+
+/* Mobil */
+@media (max-width: 700px) {
+    .home-hero {
+        min-height: 390px;
+        padding: 38px 25px 190px;
+        margin: 23px 0 35px;
+    }
+
+    .home-hero h1 {
+        font-size: clamp(34px, 8vw, 45px);
+        letter-spacing: -1.8px;
+    }
+
+    .home-hero .subtitle {
+        font-size: 13px;
+        max-width: 380px;
+    }
+
+    .home-hero::before {
+        width: 220px;
+        height: 220px;
+        right: 50%;
+        top: auto;
+        bottom: -55px;
+        transform: translateX(50%);
+    }
+
+    .globe-visual {
+        width: 170px;
+        height: 170px;
+        right: 50%;
+        top: auto;
+        bottom: -5px;
+        transform: translateX(50%);
+        font-size: 125px;
+    }
+
+    @keyframes globeFloat {
+        0%, 100% {
+            transform: translate(50%, 0);
+        }
+        50% {
+            transform: translate(50%, -8px);
+        }
+    }
+
+    .home-grid {
+        grid-template-columns: 1fr;
+        gap: 11px;
+    }
+
+    .home-card {
+        min-height: 88px;
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .home-card-icon {
+        flex-basis: 47px;
+        width: 47px;
+        height: 47px;
+        font-size: 22px;
+    }
+
+    .home-card-text strong {
+        font-size: 14px;
+    }
+
+    .home-card-text small {
+        font-size: 11px;
+    }
+
+    .home-menu h2 {
+        font-size: 22px;
+    }
+
+    .app-view {
+        padding-top: 23px;
+    }
+}
+
+/* Små mobilskjermer */
+@media (max-width: 380px) {
+    .home-hero {
+        padding-left: 19px;
+        padding-right: 19px;
+    }
+
+    .home-hero h1 {
+        font-size: 32px;
+    }
+
+    .tagline {
+        display: none;
+    }
+}
+
+/* Respekter brukerens valg om redusert animasjon */
+@media (prefers-reduced-motion: reduce) {
+    .globe-visual {
+        animation: none;
+    }
+
+    .home-card,
+    .home-card-arrow {
+        transition: none;
+    }
+}
+/* Realistisk jordklode */
+
+.globe-visual {
+    width: 360px;
+    height: 360px;
+    right: 25px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 65px rgba(35, 130, 255, 0.22);
+}
+
+.globe-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+@media (max-width: 700px) {
+    .globe-visual {
+        width: 210px;
+        height: 210px;
+        right: 50%;
+        bottom: -15px;
+    }
+}
+/* Mykere overgang mellom jordklode og bakgrunn */
+
+.globe-visual {
+    box-shadow: none;
+    overflow: visible;
+}
+
+.globe-visual img {
+    border-radius: 0;
+
+    -webkit-mask-image: radial-gradient(
+        circle,
+        black 43%,
+        rgba(0, 0, 0, 0.95) 53%,
+        rgba(0, 0, 0, 0.5) 64%,
+        transparent 72%
+    );
+
+    mask-image: radial-gradient(
+        circle,
+        black 43%,
+        rgba(0, 0, 0, 0.95) 53%,
+        rgba(0, 0, 0, 0.5) 64%,
+        transparent 72%
+    );
+
+    filter: drop-shadow(0 0 30px rgba(40, 140, 255, 0.4));
+}
+
+/* ==========================================
+   GEOMASTER – APP DASHBOARD
+========================================== */
+
+#homeView {
+    position: relative;
+    isolation: isolate;
+    padding-bottom: 12px;
+}
+
+/* Diskret stjernehimmel */
+#homeView::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+        radial-gradient(1px 1px at 12% 18%, #8abaff 98%, transparent),
+        radial-gradient(1px 1px at 67% 8%, #ffffff 98%, transparent),
+        radial-gradient(2px 2px at 88% 28%, #4e9cff 98%, transparent),
+        radial-gradient(1px 1px at 31% 75%, #ffffff 98%, transparent),
+        radial-gradient(1px 1px at 74% 88%, #78b9ff 98%, transparent);
+    background-size: 320px 240px;
+    opacity: .45;
+}
+
+/* Kompakt hero */
+#homeView .home-hero {
+    min-height: 265px;
+    padding: 38px 36px;
+    margin: 18px 0 24px;
+    background:
+        radial-gradient(ellipse at 85% 45%, rgba(22, 111, 255, .25), transparent 48%),
+        linear-gradient(125deg, #0d1d37, #071325);
+    border-color: rgba(79, 145, 255, .3);
+}
+
+#homeView .home-hero h1 {
+    font-size: clamp(30px, 3.8vw, 48px);
+    max-width: 650px;
+}
+
+#homeView .home-hero .subtitle {
+    max-width: 440px;
+}
+
+#homeView .globe-visual {
+    width: 295px;
+    height: 295px;
+    right: 15px;
+}
+
+/* Meny */
+#homeView .home-menu {
+    margin-bottom: 18px;
+}
+
+#homeView .home-menu h2 {
+    font-size: 21px;
+    margin-bottom: 3px;
+}
+
+#homeView .home-menu > .section-description {
+    margin-bottom: 15px;
+}
+
+/* Fem kort på én rad */
+#homeView .home-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 11px;
+}
+
+#homeView .home-card {
+    min-height: 165px;
+    padding: 18px 12px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 9px;
+    border: 1px solid rgba(68, 158, 255, .5);
+    border-radius: 18px;
+    background:
+        linear-gradient(145deg, rgba(33, 87, 157, .45), rgba(6, 21, 47, .96));
+    box-shadow: inset 0 1px rgba(130, 193, 255, .15);
+}
+
+#homeView .home-card:hover {
+    transform: translateY(-5px);
+    border-color: #43b9ff;
+    box-shadow:
+        0 8px 30px rgba(0, 130, 255, .2),
+        inset 0 1px rgba(140, 210, 255, .3);
+}
+
+#homeView .home-card-icon {
+    width: 57px;
+    height: 57px;
+    flex: 0 0 57px;
+    border-radius: 17px;
+    font-size: 30px;
+    background: linear-gradient(145deg, #1b477f, #0b2347);
+    box-shadow: 0 4px 18px rgba(0, 100, 255, .15);
+}
+
+#homeView .home-card-text {
+    align-items: center;
+    gap: 5px;
+}
+
+#homeView .home-card-text strong {
+    font-size: 15px;
+}
+
+#homeView .home-card-text small {
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+#homeView .home-card-arrow {
+    margin: 2px 0 0;
+    padding: 0;
+    width: 27px;
+    height: 27px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #153c70;
+    font-size: 17px;
+}
+
+/* Fremgangsrad */
+.home-progress {
+    display: grid;
+    grid-template-columns: 1.2fr repeat(3, 1fr);
+    align-items: center;
+    gap: 0;
+    min-height: 84px;
+    border: 1px solid rgba(68, 158, 255, .5);
+    border-radius: 17px;
+    background: linear-gradient(120deg, #102b50, #08162c);
+    box-shadow: 0 6px 25px rgba(0, 65, 160, .12);
+}
+
+.progress-heading,
+.progress-stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px;
+}
+
+.progress-heading {
+    font-size: 15px;
+}
+
+.progress-heading > span {
+    font-size: 27px;
+}
+
+.progress-stat {
+    flex-direction: column;
+    gap: 4px;
+    border-left: 1px solid rgba(112, 168, 255, .28);
+}
+
+.progress-stat span {
+    font-size: 12px;
+    color: #a9c4eb;
+}
+
+.progress-stat strong {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Nettbrett */
+@media (min-width: 701px) and (max-width: 1050px) {
+    #homeView .home-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    #homeView .home-card {
+        min-height: 140px;
+    }
+
+    #homeView .globe-visual {
+        width: 220px;
+        height: 220px;
+        opacity: .7;
+    }
+}
+
+/* Mobil – kompakt app-oppsett */
+@media (max-width: 700px) {
+    #homeView .home-hero {
+        min-height: 250px;
+        padding: 25px 20px 120px;
+        margin: 12px 0 20px;
+    }
+
+    #homeView .home-hero h1 {
+        font-size: clamp(27px, 7vw, 37px);
+        letter-spacing: -1px;
+    }
+
+    #homeView .home-hero .subtitle {
+        max-width: 260px;
+        font-size: 12px;
+    }
+
+    #homeView .globe-visual {
+        width: 145px;
+        height: 145px;
+        right: 3px;
+        bottom: -15px;
+        top: auto;
+        opacity: .85;
+    }
+
+    #homeView .home-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    #homeView .home-card {
+        min-height: 125px;
+        padding: 13px 7px;
+        gap: 6px;
+    }
+
+    #homeView .home-card-icon {
+        width: 42px;
+        height: 42px;
+        flex-basis: 42px;
+        font-size: 23px;
+    }
+
+    #homeView .home-card-text strong {
+        font-size: 13px;
+    }
+
+    #homeView .home-card-text small {
+        font-size: 10px;
+    }
+
+    #homeView .home-card-arrow {
+        width: 23px;
+        height: 23px;
+        font-size: 14px;
+    }
+
+    #homeView .home-progress {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        min-height: auto;
+    }
+
+    .progress-heading {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+        padding: 12px 15px 5px;
+    }
+
+    .progress-stat {
+        padding: 10px 4px 14px;
+    }
+
+    .progress-stat:nth-child(2) {
+        border-left: none;
+    }
+
+    .progress-stat span {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .progress-stat strong {
+        font-size: 20px;
+    }
+}
+
+/* ==========================================
+   GEOMASTER – DASHBOARD FINJUSTERING
+========================================== */
+
+/* Litt mer kompakt på store skjermer */
+@media (min-width: 1051px) {
+    #homeView .home-hero {
+        min-height: 235px;
+        padding: 28px 36px;
+        margin-bottom: 18px;
+    }
+
+    #homeView .home-card {
+        min-height: 145px;
+        padding: 13px 10px;
+    }
+
+    #homeView .home-card-icon {
+        width: 48px;
+        height: 48px;
+        flex-basis: 48px;
+        font-size: 26px;
+    }
+
+    #homeView .home-progress {
+        min-height: 70px;
+    }
+}
+
+/* Mobil – mer balansert dashboard */
+@media (max-width: 700px) {
+    #homeView .home-hero {
+        min-height: 265px;
+        padding: 22px 18px 120px;
+        overflow: hidden;
+    }
+
+    #homeView .home-hero h1 {
+        font-size: clamp(25px, 7vw, 34px);
+    }
+
+    #homeView .home-hero .subtitle {
+        max-width: 245px;
+    }
+
+    /* Jordkloden plasseres innenfor hero-kortet */
+    #homeView .globe-visual {
+        position: absolute;
+        width: 145px;
+        height: 145px;
+        right: 8px;
+        left: auto;
+        top: auto;
+        bottom: 4px;
+        transform: none;
+        opacity: .95;
+    }
+
+    /* Overskriv tidligere flyteanimasjon */
+    #homeView .globe-visual {
+        animation: none;
+    }
+
+    #homeView .home-menu {
+        margin-bottom: 12px;
+    }
+
+    #homeView .home-menu h2 {
+        font-size: 19px;
+    }
+
+    #homeView .home-grid {
+        gap: 8px;
+    }
+
+    #homeView .home-card {
+        min-height: 116px;
+        padding: 10px 7px;
+    }
+
+    /* Statistikk-kortet bruker hele bredden */
+    #homeView .home-card:last-child {
+        grid-column: 1 / -1;
+        min-height: 75px;
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+        padding: 12px 17px;
+    }
+
+    #homeView .home-card:last-child .home-card-text {
+        align-items: flex-start;
+    }
+
+    #homeView .home-card:last-child .home-card-arrow {
+        margin-left: auto;
+    }
+
+    #homeView .home-progress {
+        border-radius: 13px;
+    }
+
+    .progress-heading {
+        font-size: 13px;
+    }
+}
+/* ==========================================
+   KOMPAKT MOBILSTARTSIDE
+========================================== */
+
+@media (max-width: 700px) {
+
+    /* Gjør hero til et kompakt velkomstkort */
+    #homeView .home-hero {
+        min-height: 135px;
+        padding: 20px 130px 20px 18px;
+        margin: 10px 0 20px;
+        border-radius: 18px;
+        justify-content: center;
+    }
+
+    /* Skjul den store engelske overskriften */
+    #homeView .home-hero h1 {
+        display: none;
+    }
+
+    /* Skjul den gamle etiketten */
+    #homeView .home-hero .eyebrow {
+        display: none;
+    }
+
+    /* Kort velkomsttekst */
+    #homeView .home-hero .subtitle {
+        max-width: 100%;
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.5;
+        color: #d3e2ff;
+    }
+
+    /* Mindre globus på høyre side */
+    #homeView .globe-visual {
+        width: 115px;
+        height: 115px;
+        right: 5px;
+        bottom: 8px;
+        top: auto;
+        left: auto;
+        transform: none;
+        animation: none;
+    }
+
+    /* Litt mindre avstand til aktivitetene */
+    #homeView .home-menu {
+        margin-bottom: 12px;
+    }
+}
+.mobile-subtitle {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .desktop-subtitle {
+        display: none;
+    }
+
+    #homeView .mobile-subtitle {
+        display: block;
+    }
+
+    #homeView .mobile-subtitle strong {
+        display: block;
+        font-size: 17px;
+        color: white;
+        margin-bottom: 3px;
+    }
+}
+
+/* ==========================================
+   GEOMASTER – MOBILNAVIGASJON
+========================================== */
+
+.mobile-nav {
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+    .mobile-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2000;
+
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+
+        padding: 8px 8px calc(8px + env(safe-area-inset-bottom));
+
+        background: rgba(8, 19, 38, 0.96);
+        border-top: 1px solid rgba(86, 154, 255, 0.3);
+
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .mobile-nav-item {
+        min-width: 0;
+        min-height: 52px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+
+        border: none;
+        border-radius: 12px;
+        background: transparent;
+        color: #94a9c9;
+
+        font-family: inherit;
+        font-size: 10px;
+        font-weight: 600;
+        cursor: pointer;
+
+        transition: background .2s, color .2s;
+    }
+
+    .mobile-nav-icon {
+        font-size: 21px;
+        line-height: 1.2;
+    }
+
+    .mobile-nav-item.active {
+        background: rgba(42, 114, 215, 0.23);
+        color: #70b8ff;
+    }
+
+    .mobile-nav-item:active {
+        background: rgba(58, 139, 255, 0.3);
+    }
+
+    .mobile-nav-item:focus-visible {
+        outline: 2px solid #70b8ff;
+        outline-offset: 2px;
+    }
+
+    /* Plass til navigasjonslinjen */
+    body {
+        padding-bottom: calc(78px + env(safe-area-inset-bottom));
+    }
+
+    /* Unngå dobbel hjemnavigasjon på mobil */
+    #homeButton {
+        display: none !important;
+    }
+}
+/* TEST: Tving mobilnavigasjonen til å vises */
+
+@media (max-width: 700px) {
+    nav.mobile-nav {
+        display: grid !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 99999 !important;
+        background: #102b55 !important;
+        border-top: 2px solid #46a9ff !important;
+    }
+}
+/* ==========================================
+   GEOMASTER – RENERE MOBILSTARTSIDE
+========================================== */
+
+@media (max-width: 700px) {
+
+    /* Skjul statistikk-kortet på mobil */
+    #homeView .home-card[data-view-target="statsView"] {
+        display: none !important;
+    }
+
+    /* Kompakt velkomstkort */
+    #homeView .home-hero {
+        min-height: 125px;
+        padding: 18px 125px 18px 17px;
+        margin-bottom: 16px;
+    }
+
+    /* Skjul gammel tekst på mobil */
+    #homeView .desktop-subtitle {
+        display: none !important;
+    }
+
+    /* Vis mobiltekst */
+    #homeView .mobile-subtitle {
+        display: block !important;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    #homeView .mobile-subtitle strong {
+        font-size: 17px;
+        color: #ffffff;
+    }
+
+    /* Jordklode */
+    #homeView .globe-visual {
+        width: 108px;
+        height: 108px;
+        right: 8px;
+        bottom: 8px;
+    }
+}
+/* Fire knapper i bunnmenyen */
+@media (max-width: 700px) {
+    .mobile-nav {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    /* Ikke la siden bevege seg sideveis */
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Appen fyller skjermen */
+    body {
+        min-height: 100dvh;
+    }
+}
+@media (max-width: 700px) {
+    /* Hjemskjermen fyller tilgjengelig plass */
+    body:has(#homeView:not([hidden])) {
+        height: 100dvh;
+        overflow: hidden;
+    }
+
+    /* Innholdet kan ikke skrolle sideveis */
+    #homeView {
+        overflow-x: hidden;
+    }
+
+    /* Andre sider kan fremdeles vise langt innhold */
+    body:has(.app-view:not([hidden])) {
+        overflow-y: auto;
+    }
+}
+/* Kart fra bunnmenyen = kun utforsking på mobil */
+@media (max-width: 700px) {
+
+    #mapView.map-explore-only .map-mode-field {
+        display: none !important;
+    }
+
+    #mapView.map-explore-only #mapNextButton {
+        display: none !important;
+    }
+
+    #mapView.map-explore-only .section-heading h2 {
+        font-size: 22px;
+    }
+}
+/* ==========================================
+   KART SOM APP-VISNING PÅ MOBIL
+========================================== */
+
+@media (max-width: 700px) {
+
+    /* Mindre luft over kartet */
+    #mapView {
+        padding-top: 12px;
+    }
+
+    #mapView .section-heading {
+        margin-bottom: 10px;
+    }
+
+    #mapView .section-description {
+        display: none;
+    }
+
+    #mapView .map-section {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Kartet tilpasser seg mobilskjermen */
+    #mapView #worldMap {
+        height: 48dvh;
+        min-height: 250px;
+        max-height: 500px;
+        border-radius: 14px;
+    }
+
+    #mapView .map-attribution-note {
+        font-size: 10px;
+    }
+}
+
+/* ==========================================
+   GEOMASTER – MOBIL APP-LAYOUT
+========================================== */
+
+@media (max-width: 700px) {
+
+    /* Unngå horisontal scrolling */
+    html {
+        width: 100%;
+        overflow-x: clip;
+    }
+
+    body {
+        width: 100%;
+        overflow-x: clip;
+    }
+
+    /* Toppmeny forblir synlig */
+    .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 1500;
+    }
+
+    /* Hjem: ingen scrolling når alt får plass */
+    body:has(#homeView:not([hidden])) {
+        height: 100dvh;
+        overflow-y: hidden;
+    }
+
+    /* Kart: lås hele siden */
+    body:has(#mapView:not([hidden])) {
+        height: 100dvh;
+        overflow-y: hidden;
+    }
+
+    /* Kartet tilpasses tilgjengelig skjermplass */
+    #mapView {
+        height: calc(100dvh - 145px - env(safe-area-inset-bottom));
+        overflow: hidden;
+        padding-top: 8px;
+    }
+
+    #mapView .map-section {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    #mapView #worldMap {
+        flex: 1 1 auto;
+        min-height: 180px;
+        height: auto;
+        max-height: none;
+        width: 100%;
+    }
+
+    #mapView .map-attribution-note {
+        display: none;
+    }
+
+    /* Utforsker: scroll bare landlisten */
+    body:has(#explorerView:not([hidden])) {
+        height: 100dvh;
+        overflow-y: hidden;
+    }
+
+    #explorerView {
+        height: calc(100dvh - 145px - env(safe-area-inset-bottom));
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding-top: 8px;
+    }
+
+    #explorerView .explorer-section {
+        min-height: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #explorerView .explorer-layout {
+        min-height: 0;
+        flex: 1;
+        overflow: hidden;
+    }
+
+    #explorerView #countryGrid {
+        max-height: 100%;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Statistikk */
+    body:has(#statsView:not([hidden])) {
+        min-height: 100dvh;
+        overflow-x: hidden;
+    }
+
+    /* Quiz kan scrolle hvis nødvendig */
+    body:has(#quizView:not([hidden])) {
+        overflow-y: auto;
+    }
+
+    /* Skjul footer på mobil */
+    footer {
+        display: none;
+    }
+}
+
+/* ==========================================
+   GEOMASTER – MOBIL LANDUTFORSKER
+========================================== */
+
+@media (max-width: 700px) {
+
+    /* Skjul unødvendig overskrift og beskrivelse */
+    #explorerView .section-heading {
+        display: none !important;
+    }
+
+    /* Landutforskeren bruker hele tilgjengelige høyden */
+    #explorerView {
+        padding-top: 12px;
+    }
+
+    #explorerView .explorer-section {
+        gap: 10px;
+        min-height: 0;
+    }
+
+    /* Søkefelt og verdensdelfilter */
+    #explorerView .explorer-controls {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 0;
+    }
+
+    #explorerView .search-wrap,
+    #explorerView #explorerRegion {
+        width: 100%;
+    }
+
+    /* Bruk all tilgjengelig plass til landlisten */
+    #explorerView .explorer-layout {
+        display: block;
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    #explorerView #countryGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-content: start;
+        gap: 7px;
+        height: 100%;
+        max-height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-bottom: 12px;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Skjul detaljboksen foreløpig */
+    #explorerView #countryDetails {
+        display: none !important;
+    }
+
+    /* Kompakte landkort */
+    #explorerView .country-card {
+        min-height: 60px;
+        padding: 10px 12px;
+        margin: 0;
+    }
+}
+
+/* ==========================================
+   GEOMASTER – LANDDETALJER PÅ MOBIL
+========================================== */
+
+.explorer-back-button {
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+    /* Når et land åpnes, skjul søk og landliste */
+    #explorerView.show-country-details .explorer-controls,
+    #explorerView.show-country-details #countryGrid {
+        display: none !important;
+    }
+
+    /* Tilbakeknapp */
+    #explorerView.show-country-details
+    .explorer-back-button {
+        display: block !important;
+        flex: 0 0 auto;
+        width: fit-content;
+        margin: 0 0 12px;
+        padding: 10px 15px;
+        border: 1px solid #345d93;
+        border-radius: 11px;
+        background: #132c4e;
+        color: #8dc3ff;
+        font: inherit;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    /* La detaljene fylle skjermen */
+    #explorerView.show-country-details .explorer-layout {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    /* Overskriv den tidligere regelen som skjulte detaljene */
+    #explorerView.show-country-details #countryDetails {
+        display: block !important;
+        flex: 1 1 auto;
+        width: 100%;
+        min-height: 0;
+        max-height: 100%;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+}

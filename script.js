@@ -58,6 +58,14 @@ function updateStats() {
   elements.totalCorrect.textContent = stats.totalCorrect;
   const accuracy = stats.totalAnswered ? Math.round(stats.totalCorrect / stats.totalAnswered * 100) : 0;
   elements.accuracy.textContent = `${accuracy}%`;
+  // Oppdater fremgangen på startsiden
+  const homeBest = document.getElementById("homeBestScore");
+  const homeCorrect = document.getElementById("homeTotalCorrect");
+  const homeAccuracy = document.getElementById("homeAccuracy");
+
+  if (homeBest) homeBest.textContent = stats.bestScore;
+  if (homeCorrect) homeCorrect.textContent = stats.totalCorrect;
+  if (homeAccuracy) homeAccuracy.textContent = `${accuracy}%`;
   elements.reviewButton.textContent = `Start repetisjon (${stats.mistakes.length})`;
 }
 
@@ -268,6 +276,9 @@ function renderExplorer() {
       selectedExplorerCode = country.code;
       renderExplorer();
       renderCountryDetails(country);
+
+      // Åpne egen detaljvisning på mobil
+      showExplorerDetailsOnMobile();
     });
     elements.countryGrid.appendChild(button);
   });
@@ -281,6 +292,32 @@ function renderExplorer() {
 function showEmptyDetails() {
   elements.countryDetails.className = "country-details empty-details";
   elements.countryDetails.innerHTML = '<div class="details-placeholder"><span>🌐</span><strong>Velg et land</strong><span>Trykk på et land for å se mer informasjon.</span></div>';
+}
+
+// Mobil: vis enten landlisten eller landdetaljene
+function showExplorerDetailsOnMobile() {
+    if (window.innerWidth > 700) return;
+
+    document.getElementById("explorerView")
+        .classList.add("show-country-details");
+
+    document.getElementById("explorerBackButton").hidden = false;
+}
+
+function showExplorerListOnMobile() {
+    document.getElementById("explorerView")
+        .classList.remove("show-country-details");
+
+    document.getElementById("explorerBackButton").hidden = true;
+}
+
+const explorerBackButton = document.getElementById("explorerBackButton");
+
+if (explorerBackButton) {
+    explorerBackButton.addEventListener(
+        "click",
+        showExplorerListOnMobile
+    );
 }
 
 function renderCountryDetails(country) {
@@ -504,12 +541,160 @@ function updateMapMode() {
   }
 }
 
+// ==========================================
+// NAVIGASJON MELLOM STARTSIDE OG FUNKSJONER
+// ==========================================
+
+const homeView = document.getElementById("homeView");
+const homeButton = document.getElementById("homeButton");
+const logoHome = document.getElementById("logoHome");
+// Holder styr på hvordan kartet ble åpnet
+let mapOpenedAsQuiz = false;
+function showView(viewId) {
+  const views = [
+    "homeView",
+    "quizView",
+    "mapView",
+    "explorerView",
+    "statsView"
+  ];
+
+  views.forEach(id => {
+    const view = document.getElementById(id);
+    const isActive = id === viewId;
+
+    view.hidden = !isActive;
+    view.style.display = isActive ? "" : "none";
+  });
+
+  const isHome = viewId === "homeView";
+  homeButton.hidden = isHome;
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
+  // Leaflet må oppdatere størrelsen når kartet blir synlig.
+  if (viewId === "mapView" && worldMap) {
+    requestAnimationFrame(() => {
+      worldMap.invalidateSize();
+    });
+  }
+
+  // Oppdater statistikken når statistikksiden åpnes.
+  if (viewId === "statsView") {
+    updateStats();
+  }
+  if (viewId === "mapView") {
+    updateMapInterface();
+  }
+}
+
+// ==========================================
+// MOBILNAVIGASJON
+// ==========================================
+
+const mobileNavButtons =
+    document.querySelectorAll(".mobile-nav-item");
+
+function updateMobileNavigation(viewId) {
+    mobileNavButtons.forEach(button => {
+        const isActive =
+            button.dataset.mobileTarget === viewId;
+
+        button.classList.toggle("active", isActive);
+
+        if (isActive) {
+            button.setAttribute("aria-current", "page");
+        } else {
+            button.removeAttribute("aria-current");
+        }
+    });
+}
+
+// Klikk på mobilnavigasjonen
+mobileNavButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const target = button.dataset.mobileTarget;
+        // Åpne alltid landlisten når Utforsk velges fra bunnmenyen
+        if (target === "explorerView") {
+            showExplorerListOnMobile();
+        }
+
+        if (target === "homeView") {
+            showView("homeView");
+            return;
+        }
+
+        // Gjenbruk startsideknappene slik at quiz og kart
+        // åpnes med riktig modus og eksisterende logikk.
+        // Kart i bunnmenyen skal alltid være utforskingsmodus.
+        if (target === "mapView") {
+        mapOpenedAsQuiz = false;
+
+        elements.mapMode.value = "explore";
+        updateMapMode();
+        }
+
+        // Åpne valgt side uten å starte et spill.
+        showView(target);
+    });
+});
+
+// Oppdater aktiv navigasjonsknapp når visningen endres.
+const originalShowView = showView;
+
+showView = function(viewId) {
+    originalShowView(viewId);
+    updateMobileNavigation(viewId);
+};
+
+// Marker Hjem ved oppstart
+updateMobileNavigation("homeView");
+
+
+// Koble startsideknappene til riktig visning.
+document.querySelectorAll("[data-view-target]").forEach(button => {
+  button.addEventListener("click", () => {
+    const target = button.dataset.viewTarget;
+
+    // Flaggquiz eller hovedstadquiz.
+    if (button.dataset.quizMode) {
+      elements.mode.value = button.dataset.quizMode;
+      restartQuiz();
+    }
+
+    // Finn landet åpner kartet i quizmodus.
+    if (button.dataset.mapMode) {
+    mapOpenedAsQuiz = button.dataset.mapMode === "quiz";
+
+    elements.mapMode.value = button.dataset.mapMode;
+    updateMapMode();
+    }
+
+    showView(target);
+  });
+});
+
+// Hjemknappen og logoen tar brukeren tilbake.
+homeButton.addEventListener("click", () => {
+  showView("homeView");
+});
+
+logoHome.addEventListener("click", event => {
+  event.preventDefault();
+  showView("homeView");
+});
+
+// Startsiden vises ved oppstart.
+showView("homeView");
 
 elements.nextButton.addEventListener("click", () => { if (answered) newQuestion(); });
 elements.mode.addEventListener("change", restartQuiz);
 elements.difficulty.addEventListener("change", restartQuiz);
 elements.regionFilter.addEventListener("change", restartQuiz);
-elements.reviewButton.addEventListener("click", startReview);
+elements.reviewButton.addEventListener("click", () => {
+  showView("quizView");
+  startReview();
+});
 elements.countrySearch.addEventListener("input", renderExplorer);
 elements.explorerRegion.addEventListener("change", renderExplorer);
 elements.mapMode.addEventListener("change", updateMapMode);
@@ -539,4 +724,32 @@ if ("serviceWorker" in navigator) {
                 );
             });
     });
+}
+// Skjul kartmodusvelgeren når kartet brukes til utforsking
+function updateMapInterface() {
+    const mapSection = document.getElementById("mapView");
+    const modeField = document.querySelector("#mapView .map-mode-field");
+    const nextButton = document.getElementById("mapNextButton");
+
+    if (!mapSection) return;
+
+    const exploreOnly = !mapOpenedAsQuiz;
+
+    // Behold klassene for eventuell videre styling
+    mapSection.classList.toggle("map-explore-only", exploreOnly);
+    mapSection.classList.toggle("map-quiz-active", !exploreOnly);
+
+    // Skjul modusvelgeren når kartet åpnes fra bunnmenyen
+    if (modeField) {
+        modeField.style.setProperty(
+            "display",
+            exploreOnly ? "none" : "",
+            "important"
+        );
+    }
+
+    // Skjul "Nytt land"-knappen i utforskingsmodus
+    if (nextButton && exploreOnly) {
+        nextButton.hidden = true;
+    }
 }
