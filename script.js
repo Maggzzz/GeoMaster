@@ -520,3 +520,23 @@ loadCountries().catch(error => {
   elements.feedback.textContent = "Kunne ikke laste landdatabasen. Kontroller at data/countries.json finnes og at Live Server kjører.";
   elements.feedback.className = "feedback wrong";
 });
+
+// Register GeoMaster service worker
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker
+            .register("./service-worker.js")
+            .then(registration => {
+                console.log(
+                    "GeoMaster service worker registered:",
+                    registration.scope
+                );
+            })
+            .catch(error => {
+                console.error(
+                    "GeoMaster service worker registration failed:",
+                    error
+                );
+            });
+    });
+}
