@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Lær geografi med GeoMaster – flagg, hovedsteder og land fra hele verden.">
+  <title>GeoMaster</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#top" aria-label="GeoMaster hjem">🌍 GeoMaster</a>
+    <span class="tagline">EXPLORE THE WORLD</span>
+  </header>
+
+  <main class="container" id="top">
+    <section class="welcome">
+      <p class="eyebrow">YOUR GEOGRAPHY JOURNEY</p>
+      <h1>Learn the world.<br><span>One country at a time.</span></h1>
+      <p class="subtitle">Test kunnskapen din om land, flagg og hovedsteder – og utforsk verden underveis.</p>
+    </section>
+
+    <section class="stats" aria-label="Statistikk">
+      <div class="stat-card"><span>Poeng denne runden</span><strong id="score">0</strong></div>
+      <div class="stat-card"><span>Rekord</span><strong id="bestScore">0</strong></div>
+      <div class="stat-card"><span>Riktige svar totalt</span><strong id="totalCorrect">0</strong></div>
+      <div class="stat-card"><span>Treffsikkerhet</span><strong id="accuracy">0%</strong></div>
+    </section>
+
+    <section class="quiz-card" id="quiz">
+      <div class="quiz-header">
+        <div><p class="eyebrow">QUIZ MODE</p><h2 id="quizTitle">Flaggquiz</h2></div>
+        <span class="question-number" id="questionNumber">SPØRSMÅL 1</span>
+      </div>
+
+      <div class="settings">
+        <div class="field"><label for="mode">Quiztype</label><select id="mode"><option value="flag">Flagg</option><option value="capital">Hovedsteder</option></select></div>
+        <div class="field"><label for="difficulty">Vanskelighetsgrad</label><select id="difficulty"><option value="easy">Lett</option><option value="medium">Middels</option><option value="hard">Vanskelig</option></select></div>
+        <div class="field"><label for="regionFilter">Verdensdel</label><select id="regionFilter"><option value="all">Hele verden</option></select></div>
+      </div>
+
+      <div class="question-area">
+        <p id="questionText">Hvilket land tilhører dette flagget?</p>
+        <div id="questionVisual" class="flag" aria-label="Spørsmålsflagg">🌍</div>
+      </div>
+      <div id="answers" class="answers"></div>
+      <div id="feedback" class="feedback" aria-live="polite">Velg riktig svar!</div>
+      <button id="nextButton" class="primary-button" disabled>Neste spørsmål <span>→</span></button>
+    </section>
+
+    <section class="mistakes-section">
+      <div><p class="eyebrow">SMART REPETISJON</p><h2>Øv på feil svar</h2><p>Repeter landene du har svart feil på.</p></div>
+      <button id="reviewButton" class="secondary-button">Start repetisjon (0)</button>
+    </section>
+
+    <section class="map-section" id="world-map-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">INTERACTIVE WORLD MAP</p><h2>Utforsk verdenskartet</h2><p class="section-description">Trykk på et land for å utforske det, eller test deg selv ved å finne land på kartet.</p></div>
+      </div>
+      <div class="map-toolbar">
+        <label class="map-mode-field" for="mapMode">Kartmodus
+          <select id="mapMode"><option value="explore">Utforsk land</option><option value="quiz">Finn landet</option></select>
+        </label>
+        <div class="map-quiz-prompt" id="mapQuizPrompt" aria-live="polite">Velg et land på kartet for å se informasjon.</div>
+        <button type="button" class="secondary-button map-next" id="mapNextButton" hidden>Nytt land</button>
+      </div>
+      <div id="worldMap" class="world-map" role="application" aria-label="Interaktivt verdenskart"></div>
+      <p id="mapFeedback" class="map-feedback" aria-live="polite">Tips: Du kan zoome med musehjulet eller knipe på mobil.</p>
+      <div class="map-selected" id="mapSelected"><span>🌐</span><span>Velg et land på kartet for å se detaljer.</span></div>
+      <p class="map-attribution-note">Kartdata: Natural Earth via geo-countries. Kartbakgrunn © OpenStreetMap-bidragsytere.</p>
+    </section>
+
+    <section class="explorer-section" id="explorer">
+      <div class="section-heading">
+        <div><p class="eyebrow">DISCOVER THE WORLD</p><h2>Country Explorer</h2><p class="section-description">Søk etter land og bli kjent med nøkkelfakta.</p></div>
+        <span class="country-count" id="countryCount">250 land og territorier</span>
+      </div>
+      <div class="explorer-controls">
+        <label class="search-wrap" for="countrySearch"><span>⌕</span><input id="countrySearch" type="search" placeholder="Søk etter land, hovedstad eller valuta…" autocomplete="off"></label>
+        <select id="explorerRegion" aria-label="Filtrer etter verdensdel"><option value="all">Alle verdensdeler</option></select>
+      </div>
+      <div class="explorer-layout">
+        <div id="countryGrid" class="country-grid" aria-live="polite"></div>
+        <aside id="countryDetails" class="country-details empty-details"><div class="details-placeholder">🌐<strong>Velg et land</strong><span>Trykk på et land for å se mer informasjon.</span></div></aside>
+      </div>
+    </section>
+
+    <footer><p>GEOMASTER © 2026 · EXPLORE THE WORLD</p></footer>
+  </main>
+</body>
+</html>
