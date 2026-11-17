@@ -139,57 +139,46 @@
     </section>
 
 
-    <!-- QUIZ -->
+    <!-- FLAGGQUIZ / HOVEDSTADQUIZ -->
     <section id="quizView" class="app-view" hidden>
-
-      <section class="quiz-card" id="quiz">
-        <div class="quiz-header">
-          <div>
-            <p class="eyebrow">QUIZ MODE</p>
-            <h2 id="quizTitle">Flaggquiz</h2>
-          </div>
-          <span class="question-number" id="questionNumber">SPØRSMÅL 1</span>
-        </div>
-
-        <div class="settings">
+      <section class="quiz-card quiz-setup" id="quizSetup">
+        <p class="eyebrow">GEOMASTER · QUIZ</p>
+        <h2 id="quizSetupTitle">Flaggquiz</h2>
+        <p class="quiz-setup-description">Velg verdensdel og vanskelighetsgrad før du starter.</p>
+        <div class="quiz-setup-fields">
           <div class="field">
-            <label for="mode">Quiztype</label>
-            <select id="mode">
-              <option value="flag">Flagg</option>
-              <option value="capital">Hovedsteder</option>
-            </select>
+            <label for="regionFilter">Kategori</label>
+            <select id="regionFilter"><option value="all">Alle land og steder</option></select>
           </div>
-
           <div class="field">
             <label for="difficulty">Vanskelighetsgrad</label>
             <select id="difficulty">
-              <option value="easy">Lett</option>
-              <option value="medium">Middels</option>
-              <option value="hard">Vanskelig</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="regionFilter">Verdensdel</label>
-            <select id="regionFilter">
-              <option value="all">Alle land og steder</option>
+              <option value="easy">Lett – kjente land</option>
+              <option value="medium" selected>Middels – blandet</option>
+              <option value="hard">Vanskelig – utfordrende land</option>
             </select>
           </div>
         </div>
-
-        <div class="question-area">
-          <p id="questionText">Hvilket land tilhører dette flagget?</p>
-          <div id="questionVisual" class="flag" aria-label="Spørsmålsflagg">🌍</div>
-        </div>
-
-        <div id="answers" class="answers"></div>
-        <div id="feedback" class="feedback" aria-live="polite">Velg riktig svar!</div>
-
-        <button id="nextButton" class="primary-button" disabled>
-          Neste spørsmål <span>→</span>
-        </button>
+        <p id="quizPoolInfo" class="quiz-pool-info" aria-live="polite"></p>
+        <button type="button" class="primary-button" id="startQuizButton">Start quiz →</button>
       </section>
 
+      <section class="quiz-card quiz-playing" id="quizPlaying" hidden>
+        <div class="quiz-game-top">
+          <button type="button" id="quizSettingsButton" class="quiz-settings-button">← Avslutt</button>
+          <span class="question-number" id="questionNumber">SPØRSMÅL 1</span>
+          <span class="quiz-current-score" id="quizCurrentScore">0 poeng</span>
+        </div>
+        <div class="question-area">
+          <p id="questionText">Hvilket land tilhører dette flagget?</p>
+          <div id="questionVisual" class="flag" aria-live="polite">🌍</div>
+        </div>
+        <div id="answers" class="answers"></div>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+        <button type="button" id="nextButton" class="primary-button" disabled>Neste spørsmål <span>→</span></button>
+      </section>
+      <input type="hidden" id="mode" value="flag">
+      <span id="quizTitle" hidden></span>
     </section>
 
 

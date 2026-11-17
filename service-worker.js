@@ -1,5 +1,5 @@
 
-const CACHE_NAME = "geomaster-v2-phase12";
+const CACHE_NAME = "geomaster-v2-phase3";
 
 // Find the project root dynamically.
 // This also works when hosted on GitHub Pages

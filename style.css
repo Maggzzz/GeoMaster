@@ -1443,3 +1443,38 @@ body:has(#mapView:not([hidden])) main.container { width: 100%; max-width: none; 
   #mapView .map-selected { bottom: 12px; }
   /* Bunnmenyen gir navigasjon ut av kartet uten ekstra kartknapper. */
 }
+
+
+/* ==========================================
+   GEOMASTER V2 / FASE 3 – QUIZOPPSETT
+========================================== */
+#quizView { max-width: 760px; margin: 28px auto 48px; }
+#quizView .quiz-setup { padding: clamp(24px, 5vw, 42px); }
+#quizView .quiz-setup h2 { margin: 8px 0 10px; font-size: clamp(27px, 5vw, 38px); }
+.quiz-setup-description { margin: 0; line-height: 1.5; color: var(--muted); }
+.quiz-setup-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 30px 0 16px; }
+.quiz-setup-fields .field select { min-height: 50px; }
+.quiz-pool-info { margin: 6px 0 22px; color: #91b9ed; font-size: 13px; }
+#quizView .quiz-playing { padding: clamp(18px, 4vw, 32px); }
+.quiz-game-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.quiz-settings-button { background: transparent; border: 0; color: #aac7f0; font-weight: 700; cursor: pointer; padding: 8px 0; }
+.quiz-current-score { font-size: 13px; font-weight: 750; color: #92c6ff; white-space: nowrap; }
+#quizView .question-area { padding: clamp(24px, 4vw, 40px) 8px; border-top: 0; }
+#quizView .question-area p { font-size: clamp(15px, 2.7vw, 18px); }
+#quizView .flag { min-height: 135px; }
+#quizView .flag.capital-visual { font-size: clamp(29px, 6vw, 46px); line-height: 1.2; min-height: 135px; font-weight: 850; letter-spacing: -.7px; text-wrap: balance; filter: none; }
+#quizView .answers { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+#quizView .answer-button { min-height: 62px; }
+#quizView [hidden] { display: none !important; }
+@media (max-width: 700px) {
+  #quizView { margin: 8px auto 110px; width: 100%; }
+  #quizView .quiz-setup { padding: 22px 16px; }
+  #quizView .quiz-setup-fields { grid-template-columns: 1fr; gap: 14px; margin-top: 24px; }
+  #quizView .quiz-playing { padding: 16px 13px; }
+  #quizView .quiz-game-top { gap: 5px; }
+  #quizView .question-number { padding: 7px 9px; font-size: 9px; }
+  #quizView .quiz-current-score { font-size: 11px; }
+  #quizView .question-area { padding: 22px 5px; }
+  #quizView .answers { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  #quizView .answer-button { padding: 9px 7px; font-size: 12px; min-height: 65px; overflow-wrap: anywhere; }
+}

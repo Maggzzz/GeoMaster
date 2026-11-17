@@ -5,6 +5,7 @@ let currentQuestion = null;
 let answered = false;
 let reviewMode = false;
 let selectedExplorerCode = null;
+let quizActive = false;
 
 const storageKey = "geomaster-data";
 const defaultStats = { bestScore: 0, totalCorrect: 0, totalAnswered: 0, mistakes: [] };
@@ -19,6 +20,12 @@ try {
 const elements = {
   score: document.getElementById("score"), bestScore: document.getElementById("bestScore"),
   totalCorrect: document.getElementById("totalCorrect"), accuracy: document.getElementById("accuracy"),
+  quizSetup: document.getElementById("quizSetup"), quizPlaying: document.getElementById("quizPlaying"),
+  quizSetupTitle: document.getElementById("quizSetupTitle"),
+  quizPoolInfo: document.getElementById("quizPoolInfo"),
+  quizCurrentScore: document.getElementById("quizCurrentScore"),
+  startQuizButton: document.getElementById("startQuizButton"),
+  quizSettingsButton: document.getElementById("quizSettingsButton"),
   questionNumber: document.getElementById("questionNumber"), questionText: document.getElementById("questionText"),
   questionVisual: document.getElementById("questionVisual"), answers: document.getElementById("answers"),
   feedback: document.getElementById("feedback"), nextButton: document.getElementById("nextButton"),
@@ -43,7 +50,7 @@ async function loadCountries() {
   if (!Array.isArray(countries) || countries.length < 4) throw new Error("Landdatabasen ser ikke ut til å være gyldig.");
   populateRegionFilters();
   updateStats();
-  newQuestion();
+  updateQuizSetup();
   renderExplorer();
   await initializeWorldMap();
 }
@@ -101,18 +108,51 @@ function getCountryPool() {
   const mode = elements.mode.value;
   const region = elements.regionFilter.value;
   let pool = countries.filter(country => country.flag && country.name);
-
-  // Hovedstadquizen skal aldri vise tomme eller ukjente hovedsteder.
-  if (mode === "capital") pool = pool.filter(country => country.capital && country.capital !== "Ukjent");
+  if (mode === "capital") {
+    pool = pool.filter(country => country.capital && country.capital !== "Ukjent");
+  }
   pool = pool.filter(country => countryMatchesCategory(country, region));
 
+  // Difficulty is relative to the selected region so small regions and
+  // territories always have enough distinct answers to play.
   if (difficulty === "easy") {
-    pool = pool.filter(country => easyCodes.has(country.code));
-  } else if (difficulty === "medium") {
-    // Middels: land med minst én million innbyggere, uten polare/antarktiske områder.
-    pool = pool.filter(country => (Number(country.population) || 0) >= 1000000 && !["Polar", "Antarctic", "Antarctic Ocean"].includes(country.region));
+    const ranked = [...pool].sort((a, b) =>
+      Number(easyCodes.has(b.code)) - Number(easyCodes.has(a.code)) ||
+      (Number(b.population) || 0) - (Number(a.population) || 0));
+    pool = ranked.slice(0, Math.max(4, Math.ceil(pool.length * 0.45)));
+  } else if (difficulty === "hard") {
+    // Keep a broader answer pool; harder questions are selected in newQuestion.
+    pool = [...pool];
   }
   return pool;
+}
+
+function updateQuizSetup() {
+  const isCapital = elements.mode.value === "capital";
+  elements.quizSetupTitle.textContent = isCapital ? "🏛️ Hovedstadquiz" : "🚩 Flaggquiz";
+  const pool = getCountryPool();
+  elements.quizPoolInfo.textContent = `${pool.length} mulige ${pool.length === 1 ? "land/steder" : "land og steder"} i dette utvalget`;
+  elements.startQuizButton.disabled = pool.length < 4;
+}
+
+function showQuizSetup() {
+  quizActive = false;
+  reviewMode = false;
+  elements.quizSetup.hidden = false;
+  elements.quizPlaying.hidden = true;
+  updateQuizSetup();
+}
+
+function beginQuiz() {
+  if (getCountryPool().length < 4) return;
+  quizActive = true;
+  score = 0;
+  questionCount = 0;
+  reviewMode = false;
+  elements.quizSetup.hidden = true;
+  elements.quizPlaying.hidden = false;
+  updateStats();
+  newQuestion();
 }
 
 function randomItem(array) { return array[Math.floor(Math.random() * array.length)]; }
@@ -139,22 +179,50 @@ function newQuestion() {
     return;
   }
 
+  if (elements.difficulty.value === "hard" && !reviewMode) {
+    // Hard: prioritize lesser-known entries while retaining some variety.
+    const sorted = [...questionPool].sort((a, b) =>
+      (Number(a.population) || 0) - (Number(b.population) || 0));
+    questionPool = sorted.slice(0, Math.max(4, Math.ceil(sorted.length * 0.65)));
+  }
   currentQuestion = randomItem(questionPool);
   questionCount++;
   const mode = elements.mode.value;
   elements.quizTitle.textContent = mode === "flag" ? "Flaggquiz" : "Hovedstadquiz";
   elements.questionNumber.textContent = `SPØRSMÅL ${questionCount}`;
+  elements.quizCurrentScore.textContent = `${score} poeng`;
   elements.questionText.textContent = mode === "flag" ? "Hvilket land tilhører dette flagget?" : `Hva er hovedstaden i ${currentQuestion.name}?`;
-  elements.questionVisual.replaceChildren(
-    createFlagImage(currentQuestion, "quiz-flag-image"));
-  elements.questionVisual.setAttribute("aria-label", `Flagget til ${currentQuestion.name}`);
+  if (mode === "flag") {
+    elements.questionVisual.replaceChildren(createFlagImage(currentQuestion, "quiz-flag-image"));
+    elements.questionVisual.setAttribute("aria-label", "Flagg – velg riktig land");
+    elements.questionVisual.classList.remove("capital-visual");
+  } else {
+    elements.questionVisual.textContent = currentQuestion.name;
+    elements.questionVisual.setAttribute("aria-label", `Land: ${currentQuestion.name}`);
+    elements.questionVisual.classList.add("capital-visual");
+  }
   elements.answers.innerHTML = "";
   elements.feedback.textContent = "Velg riktig svar!";
   elements.feedback.className = "feedback";
   elements.nextButton.disabled = true;
 
-  const alternatives = answerPool.filter(country => country.code !== currentQuestion.code);
-  const choices = [currentQuestion, ...shuffle(alternatives).slice(0, 3)];
+  // Capital names must be unique; otherwise multiple answer buttons could
+  // be correct for a single question.
+  const seen = new Set([mode === "capital" ? currentQuestion.capital : currentQuestion.name]);
+  let alternatives = shuffle(answerPool.filter(country => country.code !== currentQuestion.code))
+    .filter(country => {
+      const label = mode === "capital" ? country.capital : country.name;
+      if (seen.has(label)) return false;
+      seen.add(label);
+      return true;
+    });
+  if (elements.difficulty.value === "hard") {
+    // For hard mode, favor distractors from nearby population ranks.
+    alternatives.sort((a, b) =>
+      Math.abs(Math.log1p(Number(a.population) || 0) - Math.log1p(Number(currentQuestion.population) || 0)) -
+      Math.abs(Math.log1p(Number(b.population) || 0) - Math.log1p(Number(currentQuestion.population) || 0)));
+  }
+  const choices = [currentQuestion, ...alternatives.slice(0, 3)];
   shuffle(choices).forEach(country => {
     const button = document.createElement("button");
     button.type = "button";
@@ -200,6 +268,7 @@ function checkAnswer(selected, selectedButton) {
   stats.bestScore = Math.max(stats.bestScore, score);
   saveStats();
   updateStats();
+  elements.quizCurrentScore.textContent = `${score} poeng`;
   elements.nextButton.disabled = false;
 }
 
@@ -221,6 +290,9 @@ function startReview() {
     return;
   }
   reviewMode = true;
+  quizActive = true;
+  elements.quizSetup.hidden = true;
+  elements.quizPlaying.hidden = false;
   score = 0;
   questionCount = 0;
   updateStats();
@@ -691,7 +763,7 @@ document.querySelectorAll("[data-view-target]").forEach(button => {
     // Flaggquiz eller hovedstadquiz.
     if (button.dataset.quizMode) {
       elements.mode.value = button.dataset.quizMode;
-      restartQuiz();
+      showQuizSetup();
     }
 
     // Finn landet åpner kartet i quizmodus.
@@ -720,9 +792,10 @@ logoHome.addEventListener("click", event => {
 showView("homeView");
 
 elements.nextButton.addEventListener("click", () => { if (answered) newQuestion(); });
-elements.mode.addEventListener("change", restartQuiz);
-elements.difficulty.addEventListener("change", restartQuiz);
-elements.regionFilter.addEventListener("change", restartQuiz);
+elements.startQuizButton.addEventListener("click", beginQuiz);
+elements.quizSettingsButton.addEventListener("click", showQuizSetup);
+elements.difficulty.addEventListener("change", updateQuizSetup);
+elements.regionFilter.addEventListener("change", updateQuizSetup);
 elements.reviewButton.addEventListener("click", () => {
   showView("quizView");
   startReview();
