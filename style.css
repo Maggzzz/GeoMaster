@@ -1478,3 +1478,37 @@ body:has(#mapView:not([hidden])) main.container { width: 100%; max-width: none; 
   #quizView .answers { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
   #quizView .answer-button { padding: 9px 7px; font-size: 12px; min-height: 65px; overflow-wrap: anywhere; }
 }
+
+
+/* GeoMaster v2 – fase 4: spillvalg og kontinentutfordring */
+#mapView [hidden] { display: none !important; }
+#mapView .map-game-panel {
+  position: absolute; z-index: 1450; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: min(440px, calc(100vw - 28px)); max-height: min(80dvh, 610px); overflow-y: auto;
+  padding: clamp(20px, 4vw, 30px); border: 1px solid #3b638f; border-radius: 20px;
+  background: rgba(10, 25, 47, .97); color: #e7f1ff; box-shadow: 0 20px 80px #000a;
+}
+#mapView .map-game-eyebrow { margin: 0 0 8px; font-size: 11px; font-weight: 800; letter-spacing: .15em; color: #77baff; }
+#mapView .map-game-panel h2 { margin: 0 0 10px; font-size: clamp(24px, 5vw, 30px); }
+#mapView .map-game-panel p { line-height: 1.5; color: #abc6e5; }
+#mapView .map-game-panel label { display: block; margin: 18px 0 8px; font-weight: 700; font-size: 13px; }
+#mapView #mapGameRegion { display: block; width: 100%; min-height: 46px; padding: 10px; border-radius: 10px; border: 1px solid #4a638a; background: #192d4c; color: #fff; }
+#mapView .map-game-actions { display: grid; gap: 10px; margin-top: 18px; }
+#mapView .map-game-primary { border: 1px solid #448ad9; border-radius: 11px; background: #2369c1; color: white; min-height: 46px; padding: 10px; font: inherit; font-weight: 750; cursor: pointer; }
+#mapView .map-game-challenge { background: #152e4e; }
+#mapView .map-game-primary:disabled { opacity: .4; cursor: not-allowed; }
+#mapView .map-game-hint { font-size: 12px; margin-bottom: 0; }
+#mapView .map-challenge-hud { position: absolute; top: max(12px, env(safe-area-inset-top)); left: 50%; transform: translateX(-50%); z-index: 1400; display: flex; align-items: center; justify-content: center; gap: 12px; width: max-content; max-width: calc(100vw - 24px); padding: 9px 12px; border: 1px solid #3a547a; border-radius: 12px; background: rgba(11,27,50,.96); color: #eaf3ff; font-weight: 750; font-size: 12px; box-shadow: 0 5px 20px #0006; }
+#mapView #mapChallengeStop { border: 1px solid #526787; color: #e4ecfa; background: #213450; border-radius: 8px; padding: 7px 10px; cursor: pointer; }
+#mapView .map-game-result { text-align: center; }
+#mapView .map-game-result .map-game-actions { grid-template-columns: 1fr 1fr; }
+#mapView.map-quiz-active .map-feedback { top: 108px; }
+#mapView.map-quiz-active .map-toolbar { top: 65px; }
+@media (max-width:700px) {
+ #mapView .map-game-panel { top: 47%; max-height: calc(100% - 24px); }
+ #mapView .map-challenge-hud { top: 8px; gap: 7px; padding: 7px; font-size: 10px; }
+ #mapView #mapChallengeStop { padding: 6px; font-size: 10px; }
+ #mapView.map-quiz-active .map-toolbar { top: 49px; right: 8px; width: calc(100% - 16px); }
+ #mapView.map-quiz-active .map-feedback { top: 134px; }
+ #mapView .map-game-result .map-game-actions { grid-template-columns: 1fr; }
+}

@@ -218,6 +218,35 @@
           </button>
         </div>
 
+        <!-- Fase 4: Spillvalg og kontinentutfordring. Synlig kun når kartet åpnes som spill. -->
+        <div id="mapGameSetup" class="map-game-panel" hidden>
+          <p class="map-game-eyebrow">KARTSPILL</p>
+          <h2>Velg spillmodus</h2>
+          <p>Finn ett land av gangen, eller fullfør et helt kontinent mot klokken.</p>
+          <label for="mapGameRegion">Verdensdel</label>
+          <select id="mapGameRegion"></select>
+          <div class="map-game-actions">
+            <button type="button" id="startSingleMapGame" class="map-game-primary">Finn landet</button>
+            <button type="button" id="startChallengeMapGame" class="map-game-primary map-game-challenge">Kontinentutfordring</button>
+          </div>
+          <p id="mapGamePoolInfo" class="map-game-hint" aria-live="polite"></p>
+        </div>
+        <div id="mapChallengeHud" class="map-challenge-hud" hidden>
+          <span id="mapChallengeProgress">0 / 0 land</span>
+          <span id="mapChallengeTime">00:00</span>
+          <span id="mapChallengeMistakes">Feil: 0</span>
+          <button id="mapChallengeStop" type="button" aria-label="Avslutt utfordringen">Avslutt</button>
+        </div>
+        <div id="mapChallengeResult" class="map-game-panel map-game-result" hidden>
+          <p class="map-game-eyebrow">UTFORDRING FULLFØRT</p>
+          <h2 id="mapChallengeResultTitle">Bra jobbet!</h2>
+          <p id="mapChallengeResultSummary"></p>
+          <p id="mapChallengeBest"></p>
+          <div class="map-game-actions">
+            <button id="mapChallengeAgain" type="button" class="map-game-primary">Spill igjen</button>
+            <button id="mapChallengeMenu" type="button" class="map-game-primary map-game-challenge">Til spillvalg</button>
+          </div>
+        </div>
         <div id="worldMap" class="world-map" role="application" aria-label="Interaktivt verdenskart"></div>
         <button type="button" id="mapExitButton" class="map-exit-button" aria-label="Tilbake til hjem">←</button>
 

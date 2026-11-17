@@ -443,6 +443,172 @@ let mapQuizAnswered = false;
 let mapQuizWrongCode = null;
 let selectedMapCode = null;
 
+// Fase 4: separat utfordringsstatistikk; eksisterende quizstatistikk endres ikke.
+const mapChallengeStorageKey = "geomaster-continent-records-v1";
+let mapChallengeRecords = {};
+try { mapChallengeRecords = JSON.parse(localStorage.getItem(mapChallengeStorageKey) || "{}"); }
+catch { mapChallengeRecords = {}; }
+let mapGameType = "single"; // single | challenge
+let mapGameScreen = "setup"; // setup | playing | result | explore
+let mapChallengeQueue = [];
+let mapChallengeCompleted = new Set();
+let mapChallengeCurrent = null;
+let mapChallengeErrors = 0;
+let mapChallengeStartTime = 0;
+let mapChallengeElapsed = 0;
+let mapChallengeTimer = null;
+let mapChallengeCategory = "all";
+const mapGameSetup = document.getElementById("mapGameSetup");
+const mapGameRegion = document.getElementById("mapGameRegion");
+const mapGamePoolInfo = document.getElementById("mapGamePoolInfo");
+const mapChallengeHud = document.getElementById("mapChallengeHud");
+const mapChallengeResult = document.getElementById("mapChallengeResult");
+
+function getMapGameCandidates(category) {
+  return countries.filter(c => c.name && mapFeaturesByCode.has(c.code) && countryMatchesCategory(c, category));
+}
+function formatChallengeTime(seconds) {
+  const sec = Math.floor(seconds);
+  return `${String(Math.floor(sec / 60)).padStart(2, "0")}:${String(sec % 60).padStart(2, "0")}`;
+}
+function shuffleMapCountries(arr) {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+function clearMapChallengeTimer() {
+  if (mapChallengeTimer !== null) { clearInterval(mapChallengeTimer); mapChallengeTimer = null; }
+}
+function updateMapChallengeHud() {
+  document.getElementById("mapChallengeProgress").textContent = `${mapChallengeCompleted.size} / ${mapChallengeQueue.length} land`;
+  document.getElementById("mapChallengeTime").textContent = formatChallengeTime(mapChallengeElapsed);
+  document.getElementById("mapChallengeMistakes").textContent = `Feil: ${mapChallengeErrors}`;
+}
+function zoomMapToCategory(category) {
+  if (!worldMap || !countryGeoLayer) return;
+  const pool = getMapGameCandidates(category);
+  const bounds = L.latLngBounds([]);
+  for (const c of pool) {
+    const layer = mapFeaturesByCode.get(c.code);
+    if (layer && typeof layer.getBounds === "function") bounds.extend(layer.getBounds());
+  }
+  if (bounds.isValid()) worldMap.fitBounds(bounds, { padding: [26, 26], maxZoom: 5, animate: false });
+  else worldMap.setView([20, 0], 2);
+}
+function updateMapGamePoolInfo() {
+  const count = getMapGameCandidates(mapGameRegion.value).length;
+  mapGamePoolInfo.textContent = `${count} kartlagte land/steder i denne kategorien. Områder uten kartgrenser kan ikke spilles.`;
+  document.getElementById("startSingleMapGame").disabled = count === 0;
+  document.getElementById("startChallengeMapGame").disabled = count === 0;
+}
+function updateMapGameScreen() {
+  const quiz = mapOpenedAsQuiz && elements.mapMode.value === "quiz";
+  mapGameSetup.hidden = !(quiz && mapGameScreen === "setup");
+  mapChallengeHud.hidden = !(quiz && mapGameType === "challenge" && mapGameScreen === "playing");
+  mapChallengeResult.hidden = !(quiz && mapGameScreen === "result");
+  const playing = quiz && mapGameScreen === "playing";
+  const toolbar = document.querySelector("#mapView .map-toolbar");
+  if (toolbar) toolbar.hidden = !playing;
+  const feedback = elements.mapFeedback;
+  if (feedback) feedback.hidden = !playing;
+  if (!playing) elements.mapNextButton.hidden = true;
+  if (playing && mapGameType === "challenge") elements.mapNextButton.hidden = true;
+}
+function showMapGameSetup() {
+  clearMapChallengeTimer();
+  mapGameScreen = "setup";
+  mapChallengeCurrent = null;
+  mapQuizTarget = null;
+  mapQuizAnswered = false;
+  mapQuizWrongCode = null;
+  selectedMapCode = null;
+  elements.mapSelected.hidden = true;
+  updateMapGamePoolInfo();
+  updateMapGameScreen();
+  refreshMapStyles();
+}
+function startSingleMapGame() {
+  clearMapChallengeTimer();
+  mapGameType = "single";
+  mapGameScreen = "playing";
+  elements.mapRegionFilter.value = mapGameRegion.value;
+  updateMapGameScreen();
+  startMapQuiz();
+  zoomMapToCategory(mapGameRegion.value);
+}
+function startMapChallenge() {
+  mapChallengeCategory = mapGameRegion.value;
+  const candidates = getMapGameCandidates(mapChallengeCategory);
+  if (!candidates.length) { updateMapGamePoolInfo(); return; }
+  clearMapChallengeTimer();
+  mapGameType = "challenge";
+  mapGameScreen = "playing";
+  mapChallengeQueue = shuffleMapCountries(candidates);
+  mapChallengeCompleted = new Set();
+  mapChallengeCurrent = mapChallengeQueue[0];
+  mapChallengeErrors = 0;
+  mapChallengeElapsed = 0;
+  mapChallengeStartTime = Date.now();
+  mapQuizTarget = null;
+  mapQuizAnswered = false;
+  selectedMapCode = null;
+  elements.mapSelected.hidden = true;
+  mapChallengeTimer = setInterval(() => {
+    mapChallengeElapsed = Math.floor((Date.now() - mapChallengeStartTime) / 1000);
+    updateMapChallengeHud();
+  }, 250);
+  updateMapGameScreen();
+  elements.mapQuizPrompt.textContent = `Trykk på ${mapChallengeCurrent.name}`;
+  elements.mapFeedback.textContent = "Finn landet uten å avsløre fasiten.";
+  elements.mapFeedback.className = "map-feedback";
+  updateMapChallengeHud();
+  zoomMapToCategory(mapChallengeCategory);
+  refreshMapStyles();
+}
+function finishMapChallenge() {
+  mapChallengeElapsed = Math.floor((Date.now() - mapChallengeStartTime) / 1000);
+  clearMapChallengeTimer();
+  mapChallengeCurrent = null;
+  mapGameScreen = "result";
+  const category = mapChallengeCategory;
+  const old = mapChallengeRecords[category];
+  const isNewBest = !old || mapChallengeErrors < old.errors || (mapChallengeErrors === old.errors && mapChallengeElapsed < old.seconds);
+  if (isNewBest) {
+    mapChallengeRecords[category] = { errors: mapChallengeErrors, seconds: mapChallengeElapsed, count: mapChallengeQueue.length };
+    try { localStorage.setItem(mapChallengeStorageKey, JSON.stringify(mapChallengeRecords)); }
+    catch (err) { console.warn("Kunne ikke lagre kartrekord:", err); }
+  }
+  document.getElementById("mapChallengeResultTitle").textContent = `${categoryNames[category]} fullført!`;
+  document.getElementById("mapChallengeResultSummary").textContent = `${mapChallengeQueue.length} land/steder · ${formatChallengeTime(mapChallengeElapsed)} · ${mapChallengeErrors} feiltrykk`;
+  const best = mapChallengeRecords[category];
+  document.getElementById("mapChallengeBest").textContent = `${isNewBest ? "🏆 Ny rekord! " : "Din rekord: "}${best.errors} feil · ${formatChallengeTime(best.seconds)}`;
+  updateMapGameScreen();
+  refreshMapStyles();
+}
+function handleChallengeCountryClick(code) {
+  if (mapGameScreen !== "playing" || !mapChallengeCurrent) return;
+  if (code === mapChallengeCurrent.code) {
+    mapChallengeCompleted.add(code);
+    if (mapChallengeCompleted.size === mapChallengeQueue.length) {
+      finishMapChallenge();
+      return;
+    }
+    mapChallengeCurrent = mapChallengeQueue[mapChallengeCompleted.size];
+    elements.mapQuizPrompt.textContent = `Trykk på ${mapChallengeCurrent.name}`;
+    elements.mapFeedback.textContent = "Riktig! Neste land …";
+    elements.mapFeedback.className = "map-feedback correct";
+  } else {
+    mapChallengeErrors++;
+    elements.mapFeedback.textContent = "Feiltrykk! Prøv igjen.";
+    elements.mapFeedback.className = "map-feedback wrong";
+  }
+  updateMapChallengeHud();
+  refreshMapStyles();
+}
+
 const geoJsonUrl = "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson";
 
 async function initializeWorldMap() {
@@ -486,7 +652,8 @@ async function initializeWorldMap() {
       }
     }).addTo(worldMap);
     window.setTimeout(() => worldMap.invalidateSize(), 150);
-    if (elements.mapMode.value === "quiz") startMapQuiz();
+    updateMapGamePoolInfo();
+    if (mapOpenedAsQuiz) showMapGameSetup();
   } catch (error) {
     console.error(error);
     showMapError("Kunne ikke laste kartdata. Du kan fortsatt bruke quiz og Country Explorer.");
@@ -497,6 +664,10 @@ async function initializeWorldMap() {
 function mapFeatureStyle(feature) {
     const code = feature.properties?.["ISO3166-1-Alpha-2"];
 
+    // Kontinentutfordring: allerede funne land forblir grønne.
+    if (mapOpenedAsQuiz && mapGameType === "challenge" && mapGameScreen !== "setup" && mapChallengeCompleted.has(code)) {
+      return { color: "#36c98a", weight: 1.4, opacity: 1, fillColor: "#25a574", fillOpacity: 0.85 };
+    }
     // Vis resultatfargene etter at spilleren har svart.
     if (elements.mapMode.value === "quiz" && mapQuizAnswered) {
 
@@ -571,6 +742,11 @@ function renderMapCountry(country) {
 }
 
 function handleMapCountryClick(code, mapName) {
+  if (mapOpenedAsQuiz && mapGameScreen !== "playing") return;
+  if (mapOpenedAsQuiz && mapGameType === "challenge") {
+    handleChallengeCountryClick(code);
+    return;
+  }
   if (elements.mapMode.value === "quiz") {
     if (mapQuizAnswered || !mapQuizTarget) return;
     mapQuizAnswered = true;
@@ -608,6 +784,7 @@ function handleMapCountryClick(code, mapName) {
 }
 
 function startMapQuiz() {
+  if (mapOpenedAsQuiz && (mapGameType !== "single" || mapGameScreen !== "playing")) return;
   const category = elements.mapRegionFilter?.value || "all";
   const candidates = countries.filter(country => mapFeaturesByCode.has(country.code) && country.name && countryMatchesCategory(country, category));
   if (!candidates.length) {
@@ -736,6 +913,8 @@ mobileNavButtons.forEach(button => {
         elements.mapSelected.hidden = true;
         selectedMapCode = null;
         updateMapMode();
+        mapGameScreen = "explore";
+        updateMapGameScreen();
         }
 
         // Åpne valgt side uten å starte et spill.
@@ -747,6 +926,7 @@ mobileNavButtons.forEach(button => {
 const originalShowView = showView;
 
 showView = function(viewId) {
+    if (viewId !== "mapView") clearMapChallengeTimer();
     originalShowView(viewId);
     updateMobileNavigation(viewId);
 };
@@ -771,7 +951,8 @@ document.querySelectorAll("[data-view-target]").forEach(button => {
     mapOpenedAsQuiz = button.dataset.mapMode === "quiz";
 
     elements.mapMode.value = button.dataset.mapMode;
-    updateMapMode();
+    if (mapOpenedAsQuiz) showMapGameSetup();
+    else { clearMapChallengeTimer(); mapGameScreen = "explore"; updateMapMode(); }
     }
 
     showView(target);
@@ -802,12 +983,28 @@ elements.reviewButton.addEventListener("click", () => {
 });
 elements.countrySearch.addEventListener("input", renderExplorer);
 elements.explorerRegion.addEventListener("change", renderExplorer);
-elements.mapMode.addEventListener("change", updateMapMode);
+elements.mapMode.addEventListener("change", () => {
+  if (elements.mapMode.value === "quiz") showMapGameSetup();
+  else { clearMapChallengeTimer(); mapGameScreen = "explore"; updateMapMode(); }
+});
 elements.mapRegionFilter.addEventListener("change", () => {
-  if (elements.mapMode.value === "quiz") startMapQuiz();
+  if (elements.mapMode.value === "quiz" && mapGameType === "single" && mapGameScreen === "playing") {
+    mapGameRegion.value = elements.mapRegionFilter.value;
+    startMapQuiz();
+    zoomMapToCategory(elements.mapRegionFilter.value);
+  }
 });
 document.getElementById("mapExitButton").addEventListener("click", () => showView("homeView"));
 elements.mapNextButton.addEventListener("click", startMapQuiz);
+// Fase 4-kontroller. Egen meny for kartspill, ikke for kartutforsking.
+mapGameRegion.replaceChildren(new Option(categoryNames.all, "all"));
+categoryOrder.forEach(c => mapGameRegion.add(new Option(categoryNames[c], c)));
+mapGameRegion.addEventListener("change", updateMapGamePoolInfo);
+document.getElementById("startSingleMapGame").addEventListener("click", startSingleMapGame);
+document.getElementById("startChallengeMapGame").addEventListener("click", startMapChallenge);
+document.getElementById("mapChallengeStop").addEventListener("click", showMapGameSetup);
+document.getElementById("mapChallengeAgain").addEventListener("click", startMapChallenge);
+document.getElementById("mapChallengeMenu").addEventListener("click", showMapGameSetup);
 
 loadCountries().catch(error => {
   console.error(error);
@@ -859,6 +1056,7 @@ function updateMapInterface() {
         );
     }
 
+    updateMapGameScreen();
     // Skjul "Nytt land"-knappen i utforskingsmodus
     if (nextButton && exploreOnly) {
         nextButton.hidden = true;
