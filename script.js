@@ -52,6 +52,7 @@ async function loadCountries() {
   updateStats();
   updateQuizSetup();
   renderExplorer();
+  hlUpdatePool();
   await initializeWorldMap();
 }
 
@@ -75,6 +76,7 @@ function updateStats() {
   if (homeCorrect) homeCorrect.textContent = stats.totalCorrect;
   if (homeAccuracy) homeAccuracy.textContent = `${accuracy}%`;
   elements.reviewButton.textContent = `Start repetisjon (${stats.mistakes.length})`;
+  if (typeof renderHigherLowerRecords === "function") renderHigherLowerRecords();
 }
 
 const categoryNames = {
@@ -420,7 +422,9 @@ function renderCountryDetails(country) {
     ["Areal", country.area ? `${formatNumber(country.area)} km²` : "Ikke oppgitt"],
     ["Valuta", country.currency || "Ikke oppgitt"],
     ["Språk", Array.isArray(country.languages) && country.languages.length ? country.languages.join(", ") : "Ikke oppgitt"],
-    ["Naboland", Array.isArray(country.borders) && country.borders.length ? country.borders.length : "Ingen registrert"]
+    ["Naboland", Array.isArray(country.borders) && country.borders.length ? country.borders.length : "Ingen registrert"],
+    ["Høyeste punkt", country.highestPoint && Number.isFinite(country.highestPoint.meters)
+      ? `${country.highestPoint.name} · ${formatNumber(country.highestPoint.meters)} moh.` : "Ikke registrert"]
   ];
   const list = document.createElement("div"); list.className = "detail-list";
   rows.forEach(([label, value]) => {
@@ -833,7 +837,8 @@ function showView(viewId) {
     "quizView",
     "mapView",
     "explorerView",
-    "statsView"
+    "statsView",
+    "higherLowerView"
   ];
 
   views.forEach(id => {
@@ -865,6 +870,169 @@ function showView(viewId) {
   } else {
     elements.mapSelected.hidden = true;
   }
+}
+
+
+// ==========================================
+// FASE 5 – OVER/UNDER
+// ==========================================
+const hlStorageKey = "geomaster-higher-lower-v1";
+let hlRecords = {};
+try {
+  const stored = JSON.parse(localStorage.getItem(hlStorageKey) || "{}");
+  if (stored && typeof stored === "object" && !Array.isArray(stored)) hlRecords = stored;
+} catch { hlRecords = {}; }
+const hlEls = Object.fromEntries([
+  "hlMetric", "hlRegion", "hlPoolInfo", "hlStart", "higherLowerSetup",
+  "higherLowerPlaying", "higherLowerResult", "hlStreak", "hlBest", "hlQuestion",
+  "hlCurrentCard", "hlChooseNext", "hlFeedback", "hlHigher", "hlLower",
+  "hlContinue", "hlExit", "hlResultTitle", "hlResultDetails", "hlResultBest",
+  "hlAgain", "hlMenu", "hlRecordsList"
+].map(id => [id, document.getElementById(id)]));
+const hlLabels = { population: "befolkning", area: "areal", highest: "høyeste punkt" };
+let hlGame = null;
+function hlNumber(value) { return new Intl.NumberFormat("nb-NO", {maximumFractionDigits: 2}).format(value); }
+function hlValue(country, metric) {
+  if (metric === "highest") return country.highestPoint?.meters;
+  return country[metric];
+}
+function hlEligible(metric, region) {
+  return countries.filter(c => countryMatchesCategory(c, region) && c.name &&
+    typeof hlValue(c, metric) === "number" && Number.isFinite(hlValue(c, metric)) && hlValue(c, metric) > 0);
+}
+function hlRecordKey(metric, region) { return `${metric}:${region}`; }
+function hlBestScore(metric, region) { return Number(hlRecords[hlRecordKey(metric, region)]) || 0; }
+function hlSaveScore() {
+  const key = hlRecordKey(hlGame.metric, hlGame.region);
+  const best = Math.max(hlBestScore(hlGame.metric, hlGame.region), hlGame.streak);
+  hlRecords[key] = best;
+  try { localStorage.setItem(hlStorageKey, JSON.stringify(hlRecords)); }
+  catch (e) { console.warn("Kunne ikke lagre Over/under-rekord:", e); }
+}
+function hlSelectPair(pool, previous = null) {
+  const eligible = pool.filter(c => c.code !== previous?.code &&
+    (previous === null || hlValue(c, hlGame.metric) !== hlValue(previous, hlGame.metric)) &&
+    !hlGame.used.has(c.code));
+  if (!eligible.length) return null;
+  return eligible[Math.floor(Math.random() * eligible.length)];
+}
+function hlFormatValue(country, metric) {
+  const val = hlNumber(hlValue(country, metric));
+  return metric === "population" ? `${val} innbyggere` : metric === "area" ? `${val} km²` : `${val} moh.`;
+}
+function hlCard(container, country, revealed, metric) {
+  container.replaceChildren();
+  const flag = document.createElement("div"); flag.className = "hl-flag";
+  flag.append(createFlagImage(country, "hl-flag-img"));
+  const name = document.createElement("strong"); name.textContent = country.name;
+  const value = document.createElement("span"); value.className = "hl-value";
+  value.textContent = revealed ? hlFormatValue(country, metric) : "?";
+  container.append(flag, name, value);
+  if (metric === "highest") {
+    const peak = document.createElement("small");
+    peak.textContent = revealed ? country.highestPoint.name : "Høyeste punkt";
+    container.appendChild(peak);
+  }
+}
+function hlSetScreen(screen) {
+  hlEls.higherLowerSetup.hidden = screen !== "setup";
+  hlEls.higherLowerPlaying.hidden = screen !== "playing";
+  hlEls.higherLowerResult.hidden = screen !== "result";
+}
+function hlUpdatePool() {
+  const pool = hlEligible(hlEls.hlMetric.value, hlEls.hlRegion.value);
+  hlEls.hlPoolInfo.textContent = `${pool.length} land/steder med registrerte verdier. ${hlEls.hlMetric.value === "highest" ? "Land uten fjellhøyde er utelatt." : ""}`;
+  hlEls.hlStart.disabled = pool.length < 2 || new Set(pool.map(c => hlValue(c, hlEls.hlMetric.value))).size < 2;
+}
+function hlRenderRound() {
+  const game = hlGame;
+  hlEls.hlQuestion.textContent = `Har ${game.next.name} høyere eller lavere ${hlLabels[game.metric]} enn ${game.current.name}?`;
+  hlEls.hlStreak.textContent = `${game.streak} riktige på rad`;
+  hlEls.hlBest.textContent = `Rekord: ${hlBestScore(game.metric, game.region)}`;
+  hlCard(hlEls.hlCurrentCard, game.current, true, game.metric);
+  hlCard(hlEls.hlChooseNext, game.next, game.revealed, game.metric);
+  hlEls.hlFeedback.textContent = game.revealed ? (game.correct ? "Riktig!" : "Feil svar.") : "Velg høyere eller lavere.";
+  hlEls.hlFeedback.className = `hl-feedback${game.revealed ? (game.correct ? " correct" : " wrong") : ""}`;
+  hlEls.hlHigher.hidden = game.revealed;
+  hlEls.hlLower.hidden = game.revealed;
+  hlEls.hlContinue.hidden = !game.revealed || !game.correct;
+}
+function hlShowResults(reason = "wrong") {
+  hlSaveScore();
+  hlSetScreen("result");
+  hlEls.hlResultTitle.textContent = reason === "completed" ? "Alle tilgjengelige land brukt!" : "Runden er over!";
+  hlEls.hlResultDetails.textContent = `${hlGame.streak} riktige på rad · ${hlLabels[hlGame.metric]} · ${categoryNames[hlGame.region]}`;
+  hlEls.hlResultBest.textContent = `Personlig rekord: ${hlBestScore(hlGame.metric, hlGame.region)}`;
+  renderHigherLowerRecords();
+}
+function hlStart() {
+  const metric = hlEls.hlMetric.value, region = hlEls.hlRegion.value;
+  const pool = hlEligible(metric, region);
+  if (pool.length < 2) { hlUpdatePool(); return; }
+  hlGame = { metric, region, pool, used: new Set(), streak: 0, current: null, next: null, revealed: false, correct: false };
+  hlGame.current = pool[Math.floor(Math.random() * pool.length)];
+  hlGame.used.add(hlGame.current.code);
+  hlGame.next = hlSelectPair(pool, hlGame.current);
+  if (!hlGame.next) { hlUpdatePool(); return; }
+  hlSetScreen("playing");
+  hlRenderRound();
+}
+function hlGuess(higher) {
+  if (!hlGame || hlGame.revealed) return;
+  const a = hlValue(hlGame.current, hlGame.metric);
+  const b = hlValue(hlGame.next, hlGame.metric);
+  hlGame.revealed = true;
+  hlGame.correct = higher ? b > a : b < a;
+  if (hlGame.correct) hlGame.streak++;
+  hlRenderRound();
+  if (!hlGame.correct) {
+    hlEls.hlContinue.hidden = true;
+    hlEls.hlFeedback.textContent = `Feil! ${hlGame.next.name}: ${hlFormatValue(hlGame.next, hlGame.metric)}. Trykk for resultat.`;
+    hlEls.hlContinue.textContent = "Se resultat →";
+    hlEls.hlContinue.hidden = false;
+  } else {
+    hlEls.hlContinue.textContent = "Neste sammenligning →";
+  }
+}
+function hlNext() {
+  if (!hlGame || !hlGame.revealed) return;
+  if (!hlGame.correct) { hlShowResults(); return; }
+  hlGame.current = hlGame.next;
+  hlGame.used.add(hlGame.current.code);
+  hlGame.next = hlSelectPair(hlGame.pool, hlGame.current);
+  if (!hlGame.next) { hlShowResults("completed"); return; }
+  hlGame.revealed = false;
+  hlGame.correct = false;
+  hlRenderRound();
+}
+function renderHigherLowerRecords() {
+  if (!hlEls.hlRecordsList) return;
+  hlEls.hlRecordsList.replaceChildren();
+  const entries = Object.entries(hlRecords).filter(([key, val]) => /^\w+:[\w-]+$/.test(key) && Number.isFinite(Number(val)) && Number(val) > 0).sort((a,b) => Number(b[1]) - Number(a[1]));
+  if (!entries.length) { hlEls.hlRecordsList.textContent = "Ingen rekorder ennå. Prøv Over/under!"; return; }
+  for (const [key, val] of entries) {
+    const [metric, region] = key.split(":");
+    if (!hlLabels[metric] || !categoryNames[region]) continue;
+    const line = document.createElement("div"); line.className = "hl-record-row";
+    const name = document.createElement("span"); name.textContent = `${hlLabels[metric]} · ${categoryNames[region]}`;
+    const score = document.createElement("strong"); score.textContent = `${Number(val)} på rad`;
+    line.append(name, score); hlEls.hlRecordsList.appendChild(line);
+  }
+}
+function initializeHigherLower() {
+  hlEls.hlRegion.replaceChildren(new Option(categoryNames.all, "all"));
+  categoryOrder.forEach(c => hlEls.hlRegion.add(new Option(categoryNames[c], c)));
+  hlEls.hlMetric.addEventListener("change", hlUpdatePool);
+  hlEls.hlRegion.addEventListener("change", hlUpdatePool);
+  hlEls.hlStart.addEventListener("click", hlStart);
+  hlEls.hlHigher.addEventListener("click", () => hlGuess(true));
+  hlEls.hlLower.addEventListener("click", () => hlGuess(false));
+  hlEls.hlContinue.addEventListener("click", hlNext);
+  hlEls.hlExit.addEventListener("click", () => hlSetScreen("setup"));
+  hlEls.hlAgain.addEventListener("click", hlStart);
+  hlEls.hlMenu.addEventListener("click", () => { hlSetScreen("setup"); hlUpdatePool(); });
+  hlSetScreen("setup");
+  renderHigherLowerRecords();
 }
 
 // ==========================================
@@ -940,6 +1108,8 @@ document.querySelectorAll("[data-view-target]").forEach(button => {
   button.addEventListener("click", () => {
     const target = button.dataset.viewTarget;
 
+    if (target === "higherLowerView") { hlSetScreen("setup"); hlUpdatePool(); }
+
     // Flaggquiz eller hovedstadquiz.
     if (button.dataset.quizMode) {
       elements.mode.value = button.dataset.quizMode;
@@ -1005,6 +1175,8 @@ document.getElementById("startChallengeMapGame").addEventListener("click", start
 document.getElementById("mapChallengeStop").addEventListener("click", showMapGameSetup);
 document.getElementById("mapChallengeAgain").addEventListener("click", startMapChallenge);
 document.getElementById("mapChallengeMenu").addEventListener("click", showMapGameSetup);
+
+initializeHigherLower();
 
 loadCountries().catch(error => {
   console.error(error);

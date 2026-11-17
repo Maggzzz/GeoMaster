@@ -92,6 +92,12 @@
             <span class="home-card-arrow">→</span>
           </button>
 
+          <button class="home-card higher-lower-home-card" data-view-target="higherLowerView">
+            <span class="home-card-icon">⛰️</span>
+            <span class="home-card-text"><strong>Over/under</strong><small>Hvem har mest – eller høyest?</small></span>
+            <span class="home-card-arrow">→</span>
+          </button>
+
           <button class="home-card" data-view-target="explorerView">
             <span class="home-card-icon">🌐</span>
             <span class="home-card-text">
@@ -181,6 +187,56 @@
       <span id="quizTitle" hidden></span>
     </section>
 
+
+    <!-- FASE 5 – OVER/UNDER -->
+    <section id="higherLowerView" class="app-view" hidden>
+      <section id="higherLowerSetup" class="hl-panel">
+        <p class="eyebrow">GEOMASTER · NYTT SPILL</p>
+        <h2>⛰️ Over/under</h2>
+        <p>Hvilket land har høyest verdi? Hvert riktig svar bygger rekken din. Ett feil svar avslutter runden.</p>
+        <div class="hl-settings">
+          <label for="hlMetric">Sammenlign</label>
+          <select id="hlMetric">
+            <option value="population">Befolkning</option>
+            <option value="area">Areal</option>
+            <option value="highest">Høyeste punkt</option>
+          </select>
+          <label for="hlRegion">Kategori</label>
+          <select id="hlRegion"></select>
+        </div>
+        <p id="hlPoolInfo" class="hl-hint" aria-live="polite"></p>
+        <button id="hlStart" class="primary-button" type="button">Start spill →</button>
+      </section>
+      <section id="higherLowerPlaying" class="hl-panel" hidden>
+        <div class="hl-top">
+          <button id="hlExit" type="button" class="quiz-settings-button">← Avslutt</button>
+          <span id="hlStreak" class="hl-streak">0 riktige på rad</span>
+          <span id="hlBest" class="hl-best">Rekord: 0</span>
+        </div>
+        <p id="hlQuestion" class="hl-question">Hvilket land har høyest verdi?</p>
+        <div class="hl-versus">
+          <article id="hlCurrentCard" class="hl-country"></article>
+          <span class="hl-vs">VS</span>
+          <article id="hlChooseNext" class="hl-country"></article>
+        </div>
+        <p id="hlFeedback" class="hl-feedback" aria-live="polite">Trykk på landet til høyre dersom det har høyere verdi.</p>
+        <div class="hl-buttons">
+          <button id="hlHigher" class="primary-button" type="button">↑ Høyere</button>
+          <button id="hlLower" class="secondary-button" type="button">↓ Lavere</button>
+        </div>
+        <button id="hlContinue" class="primary-button" type="button" hidden>Neste sammenligning →</button>
+      </section>
+      <section id="higherLowerResult" class="hl-panel hl-result" hidden>
+        <p class="eyebrow">RUNDE FERDIG</p>
+        <h2 id="hlResultTitle">Bra forsøkt!</h2>
+        <p id="hlResultDetails"></p>
+        <p id="hlResultBest"></p>
+        <div class="hl-result-actions">
+          <button id="hlAgain" class="primary-button" type="button">Spill igjen</button>
+          <button id="hlMenu" class="secondary-button" type="button">Endre innstillinger</button>
+        </div>
+      </section>
+    </section>
 
     <!-- FINN LANDET -->
     <section id="mapView" class="app-view" hidden>
@@ -352,6 +408,11 @@
           <span>Treffsikkerhet</span>
           <strong id="accuracy">0%</strong>
         </div>
+      </section>
+
+      <section class="hl-records-stats" aria-labelledby="hlStatsTitle">
+        <h2 id="hlStatsTitle">🏆 Over/under – rekorder</h2>
+        <div id="hlRecordsList"></div>
       </section>
 
       <section class="mistakes-section">

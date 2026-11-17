@@ -30,7 +30,11 @@
     "flagImage": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Noshaq",
+      "meters": 7492
+    }
   },
   {
     "code": "AL",
@@ -59,7 +63,11 @@
     "flagImage": "https://flagcdn.com/al.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Korab",
+      "meters": 2764
+    }
   },
   {
     "code": "DZ",
@@ -91,7 +99,11 @@
     "flagImage": "https://flagcdn.com/dz.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Tahat",
+      "meters": 2908
+    }
   },
   {
     "code": "AS",
@@ -116,7 +128,8 @@
     "flagImage": "https://flagcdn.com/as.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "AD",
@@ -143,7 +156,11 @@
     "flagImage": "https://flagcdn.com/ad.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Coma Pedrosa",
+      "meters": 2942
+    }
   },
   {
     "code": "AO",
@@ -172,7 +189,11 @@
     "flagImage": "https://flagcdn.com/ao.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Moco",
+      "meters": 2620
+    }
   },
   {
     "code": "AI",
@@ -196,7 +217,8 @@
     "flagImage": "https://flagcdn.com/ai.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "AQ",
@@ -221,7 +243,8 @@
     "flagImage": "https://flagcdn.com/aq.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "AG",
@@ -245,7 +268,8 @@
     "flagImage": "https://flagcdn.com/ag.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "AR",
@@ -276,7 +300,11 @@
     "flagImage": "https://flagcdn.com/ar.svg",
     "level": 1,
     "category": "south-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Aconcagua",
+      "meters": 6961
+    }
   },
   {
     "code": "AM",
@@ -305,7 +333,11 @@
     "flagImage": "https://flagcdn.com/am.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Aragats",
+      "meters": 4090
+    }
   },
   {
     "code": "AW",
@@ -330,7 +362,8 @@
     "flagImage": "https://flagcdn.com/aw.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "AU",
@@ -354,7 +387,11 @@
     "flagImage": "https://flagcdn.com/au.svg",
     "level": 1,
     "category": "oceania",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Kosciuszko",
+      "meters": 2228
+    }
   },
   {
     "code": "AT",
@@ -387,7 +424,11 @@
     "flagImage": "https://flagcdn.com/at.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Grossglockner",
+      "meters": 3798
+    }
   },
   {
     "code": "AZ",
@@ -417,7 +458,11 @@
     "flagImage": "https://flagcdn.com/az.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Bazardüzü",
+      "meters": 4466
+    }
   },
   {
     "code": "BS",
@@ -441,7 +486,8 @@
     "flagImage": "https://flagcdn.com/bs.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "BH",
@@ -465,7 +511,8 @@
     "flagImage": "https://flagcdn.com/bh.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "BD",
@@ -492,7 +539,11 @@
     "flagImage": "https://flagcdn.com/bd.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Saka Haphong",
+      "meters": 1052
+    }
   },
   {
     "code": "BB",
@@ -516,7 +567,8 @@
     "flagImage": "https://flagcdn.com/bb.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "BY",
@@ -547,7 +599,8 @@
     "flagImage": "https://flagcdn.com/by.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "BE",
@@ -578,7 +631,11 @@
     "flagImage": "https://flagcdn.com/be.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Signal de Botrange",
+      "meters": 694
+    }
   },
   {
     "code": "BZ",
@@ -606,7 +663,8 @@
     "flagImage": "https://flagcdn.com/bz.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "BJ",
@@ -635,7 +693,8 @@
     "flagImage": "https://flagcdn.com/bj.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "BM",
@@ -659,7 +718,8 @@
     "flagImage": "https://flagcdn.com/bm.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "BT",
@@ -686,7 +746,11 @@
     "flagImage": "https://flagcdn.com/bt.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Gangkhar Puensum",
+      "meters": 7570
+    }
   },
   {
     "code": "BO",
@@ -718,7 +782,11 @@
     "flagImage": "https://flagcdn.com/bo.svg",
     "level": 1,
     "category": "south-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Sajama",
+      "meters": 6542
+    }
   },
   {
     "code": "BQ",
@@ -742,7 +810,8 @@
     "flagImage": "https://flagcdn.com/bq.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "BA",
@@ -772,7 +841,11 @@
     "flagImage": "https://flagcdn.com/ba.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Maglić",
+      "meters": 2386
+    }
   },
   {
     "code": "BW",
@@ -802,7 +875,11 @@
     "flagImage": "https://flagcdn.com/bw.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Monalanong Hill",
+      "meters": 1494
+    }
   },
   {
     "code": "BV",
@@ -828,7 +905,8 @@
     "flagImage": "https://flagcdn.com/bv.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "BR",
@@ -864,7 +942,11 @@
     "flagImage": "https://flagcdn.com/br.svg",
     "level": 1,
     "category": "south-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Pico da Neblina",
+      "meters": 2995
+    }
   },
   {
     "code": "IO",
@@ -888,7 +970,8 @@
     "flagImage": "https://flagcdn.com/io.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "BN",
@@ -914,7 +997,8 @@
     "flagImage": "https://flagcdn.com/bn.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "BG",
@@ -944,7 +1028,11 @@
     "flagImage": "https://flagcdn.com/bg.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Musala",
+      "meters": 2925
+    }
   },
   {
     "code": "BF",
@@ -976,7 +1064,8 @@
     "flagImage": "https://flagcdn.com/bf.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "BI",
@@ -1005,7 +1094,8 @@
     "flagImage": "https://flagcdn.com/bi.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "CV",
@@ -1029,7 +1119,8 @@
     "flagImage": "https://flagcdn.com/cv.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "KH",
@@ -1057,7 +1148,8 @@
     "flagImage": "https://flagcdn.com/kh.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "CM",
@@ -1089,7 +1181,8 @@
     "flagImage": "https://flagcdn.com/cm.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "CA",
@@ -1116,7 +1209,11 @@
     "flagImage": "https://flagcdn.com/ca.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Logan",
+      "meters": 5959
+    }
   },
   {
     "code": "KY",
@@ -1140,7 +1237,8 @@
     "flagImage": "https://flagcdn.com/ky.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "CF",
@@ -1172,7 +1270,8 @@
     "flagImage": "https://flagcdn.com/cf.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "TD",
@@ -1204,7 +1303,8 @@
     "flagImage": "https://flagcdn.com/td.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "CL",
@@ -1232,7 +1332,11 @@
     "flagImage": "https://flagcdn.com/cl.svg",
     "level": 1,
     "category": "south-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Ojos del Salado",
+      "meters": 6893
+    }
   },
   {
     "code": "CN",
@@ -1273,7 +1377,11 @@
     "flagImage": "https://flagcdn.com/cn.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Everest",
+      "meters": 8848.86
+    }
   },
   {
     "code": "CX",
@@ -1297,7 +1405,8 @@
     "flagImage": "https://flagcdn.com/cx.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "CC",
@@ -1321,7 +1430,8 @@
     "flagImage": "https://flagcdn.com/cc.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "CO",
@@ -1351,7 +1461,11 @@
     "flagImage": "https://flagcdn.com/co.svg",
     "level": 1,
     "category": "south-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Pico Cristóbal Colón",
+      "meters": 5700
+    }
   },
   {
     "code": "KM",
@@ -1376,7 +1490,8 @@
     "flagImage": "https://flagcdn.com/km.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "CG",
@@ -1407,7 +1522,8 @@
     "flagImage": "https://flagcdn.com/cg.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "CD",
@@ -1445,7 +1561,8 @@
     "flagImage": "https://flagcdn.com/cd.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "CK",
@@ -1470,7 +1587,8 @@
     "flagImage": "https://flagcdn.com/ck.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "CR",
@@ -1497,7 +1615,11 @@
     "flagImage": "https://flagcdn.com/cr.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Cerro Chirripó",
+      "meters": 3820
+    }
   },
   {
     "code": "HR",
@@ -1527,7 +1649,11 @@
     "flagImage": "https://flagcdn.com/hr.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Dinara",
+      "meters": 1831
+    }
   },
   {
     "code": "CU",
@@ -1551,7 +1677,11 @@
     "flagImage": "https://flagcdn.com/cu.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Pico Turquino",
+      "meters": 1974
+    }
   },
   {
     "code": "CW",
@@ -1577,7 +1707,8 @@
     "flagImage": "https://flagcdn.com/cw.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "CY",
@@ -1605,7 +1736,11 @@
     "flagImage": "https://flagcdn.com/cy.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Olympus",
+      "meters": 1952
+    }
   },
   {
     "code": "CZ",
@@ -1630,7 +1765,11 @@
     "flagImage": "https://flagcdn.com/cz.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Sněžka",
+      "meters": 1603
+    }
   },
   {
     "code": "DK",
@@ -1656,7 +1795,11 @@
     "flagImage": "https://flagcdn.com/dk.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Møllehøj",
+      "meters": 171
+    }
   },
   {
     "code": "DJ",
@@ -1685,7 +1828,8 @@
     "flagImage": "https://flagcdn.com/dj.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "DM",
@@ -1709,7 +1853,8 @@
     "flagImage": "https://flagcdn.com/dm.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "DO",
@@ -1735,7 +1880,8 @@
     "flagImage": "https://flagcdn.com/do.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "EC",
@@ -1762,7 +1908,11 @@
     "flagImage": "https://flagcdn.com/ec.svg",
     "level": 1,
     "category": "south-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Chimborazo",
+      "meters": 6263
+    }
   },
   {
     "code": "EG",
@@ -1790,7 +1940,11 @@
     "flagImage": "https://flagcdn.com/eg.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Catherine",
+      "meters": 2629
+    }
   },
   {
     "code": "SV",
@@ -1817,7 +1971,11 @@
     "flagImage": "https://flagcdn.com/sv.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Cerro El Pital",
+      "meters": 2730
+    }
   },
   {
     "code": "GQ",
@@ -1847,7 +2005,8 @@
     "flagImage": "https://flagcdn.com/gq.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "ER",
@@ -1883,7 +2042,8 @@
     "flagImage": "https://flagcdn.com/er.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "EE",
@@ -1910,7 +2070,11 @@
     "flagImage": "https://flagcdn.com/ee.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Suur Munamägi",
+      "meters": 318
+    }
   },
   {
     "code": "ET",
@@ -1941,7 +2105,11 @@
     "flagImage": "https://flagcdn.com/et.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Ras Dashen",
+      "meters": 4550
+    }
   },
   {
     "code": "FK",
@@ -1965,7 +2133,8 @@
     "flagImage": "https://flagcdn.com/fk.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "FO",
@@ -1989,7 +2158,8 @@
     "flagImage": "https://flagcdn.com/fo.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "FJ",
@@ -2016,7 +2186,8 @@
     "flagImage": "https://flagcdn.com/fj.svg",
     "level": 1,
     "category": "oceania",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "FI",
@@ -2045,7 +2216,11 @@
     "flagImage": "https://flagcdn.com/fi.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Halti",
+      "meters": 1324
+    }
   },
   {
     "code": "FR",
@@ -2078,7 +2253,11 @@
     "flagImage": "https://flagcdn.com/fr.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mont Blanc",
+      "meters": 4806
+    }
   },
   {
     "code": "GF",
@@ -2105,7 +2284,8 @@
     "flagImage": "https://flagcdn.com/gf.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "PF",
@@ -2129,7 +2309,8 @@
     "flagImage": "https://flagcdn.com/pf.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "TF",
@@ -2153,7 +2334,8 @@
     "flagImage": "https://flagcdn.com/tf.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "GA",
@@ -2181,7 +2363,8 @@
     "flagImage": "https://flagcdn.com/ga.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "GM",
@@ -2207,7 +2390,8 @@
     "flagImage": "https://flagcdn.com/gm.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "GE",
@@ -2236,7 +2420,11 @@
     "flagImage": "https://flagcdn.com/ge.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Shkhara",
+      "meters": 5193
+    }
   },
   {
     "code": "DE",
@@ -2270,7 +2458,11 @@
     "flagImage": "https://flagcdn.com/de.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Zugspitze",
+      "meters": 2962
+    }
   },
   {
     "code": "GH",
@@ -2298,7 +2490,11 @@
     "flagImage": "https://flagcdn.com/gh.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Afadja",
+      "meters": 885
+    }
   },
   {
     "code": "GI",
@@ -2324,7 +2520,8 @@
     "flagImage": "https://flagcdn.com/gi.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "GR",
@@ -2353,7 +2550,11 @@
     "flagImage": "https://flagcdn.com/gr.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Olympus",
+      "meters": 2917
+    }
   },
   {
     "code": "GL",
@@ -2377,7 +2578,8 @@
     "flagImage": "https://flagcdn.com/gl.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "GD",
@@ -2401,7 +2603,8 @@
     "flagImage": "https://flagcdn.com/gd.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "GP",
@@ -2425,7 +2628,8 @@
     "flagImage": "https://flagcdn.com/gp.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "GU",
@@ -2451,7 +2655,8 @@
     "flagImage": "https://flagcdn.com/gu.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "GT",
@@ -2480,7 +2685,11 @@
     "flagImage": "https://flagcdn.com/gt.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Volcán Tajumulco",
+      "meters": 4220
+    }
   },
   {
     "code": "GG",
@@ -2505,7 +2714,8 @@
     "flagImage": "https://flagcdn.com/gg.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "GN",
@@ -2537,7 +2747,8 @@
     "flagImage": "https://flagcdn.com/gn.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "GW",
@@ -2564,7 +2775,8 @@
     "flagImage": "https://flagcdn.com/gw.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "GY",
@@ -2592,7 +2804,8 @@
     "flagImage": "https://flagcdn.com/gy.svg",
     "level": 1,
     "category": "south-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "HT",
@@ -2619,7 +2832,8 @@
     "flagImage": "https://flagcdn.com/ht.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "HM",
@@ -2643,7 +2857,8 @@
     "flagImage": "https://flagcdn.com/hm.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "HN",
@@ -2671,7 +2886,8 @@
     "flagImage": "https://flagcdn.com/hn.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "HK",
@@ -2698,7 +2914,8 @@
     "flagImage": "https://flagcdn.com/hk.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "HU",
@@ -2730,7 +2947,11 @@
     "flagImage": "https://flagcdn.com/hu.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Kékes",
+      "meters": 1014
+    }
   },
   {
     "code": "IS",
@@ -2754,7 +2975,11 @@
     "flagImage": "https://flagcdn.com/is.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Hvannadalshnúkur",
+      "meters": 2110
+    }
   },
   {
     "code": "IN",
@@ -2788,7 +3013,11 @@
     "flagImage": "https://flagcdn.com/in.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Kangchenjunga",
+      "meters": 8586
+    }
   },
   {
     "code": "ID",
@@ -2816,7 +3045,11 @@
     "flagImage": "https://flagcdn.com/id.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Puncak Jaya",
+      "meters": 4884
+    }
   },
   {
     "code": "IR",
@@ -2848,7 +3081,11 @@
     "flagImage": "https://flagcdn.com/ir.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Damavand",
+      "meters": 5609
+    }
   },
   {
     "code": "IQ",
@@ -2880,7 +3117,11 @@
     "flagImage": "https://flagcdn.com/iq.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Cheekha Dar",
+      "meters": 3611
+    }
   },
   {
     "code": "IE",
@@ -2907,7 +3148,11 @@
     "flagImage": "https://flagcdn.com/ie.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Carrauntoohil",
+      "meters": 1038
+    }
   },
   {
     "code": "IM",
@@ -2932,7 +3177,8 @@
     "flagImage": "https://flagcdn.com/im.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "IL",
@@ -2962,7 +3208,11 @@
     "flagImage": "https://flagcdn.com/il.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Meron",
+      "meters": 1208
+    }
   },
   {
     "code": "IT",
@@ -2993,7 +3243,11 @@
     "flagImage": "https://flagcdn.com/it.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mont Blanc",
+      "meters": 4806
+    }
   },
   {
     "code": "CI",
@@ -3023,7 +3277,8 @@
     "flagImage": "https://flagcdn.com/ci.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "JM",
@@ -3047,7 +3302,8 @@
     "flagImage": "https://flagcdn.com/jm.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "JP",
@@ -3071,7 +3327,11 @@
     "flagImage": "https://flagcdn.com/jp.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Fuji",
+      "meters": 3776
+    }
   },
   {
     "code": "JE",
@@ -3096,7 +3356,8 @@
     "flagImage": "https://flagcdn.com/je.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "JO",
@@ -3125,7 +3386,11 @@
     "flagImage": "https://flagcdn.com/jo.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Jabal Umm ad Dami",
+      "meters": 1854
+    }
   },
   {
     "code": "KZ",
@@ -3156,7 +3421,11 @@
     "flagImage": "https://flagcdn.com/kz.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Khan Tengri",
+      "meters": 7010
+    }
   },
   {
     "code": "KE",
@@ -3187,7 +3456,11 @@
     "flagImage": "https://flagcdn.com/ke.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Kenya",
+      "meters": 5199
+    }
   },
   {
     "code": "KI",
@@ -3211,7 +3484,8 @@
     "flagImage": "https://flagcdn.com/ki.svg",
     "level": 1,
     "category": "oceania",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "KP",
@@ -3239,7 +3513,11 @@
     "flagImage": "https://flagcdn.com/kp.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Paektu Mountain",
+      "meters": 2744
+    }
   },
   {
     "code": "KR",
@@ -3265,7 +3543,11 @@
     "flagImage": "https://flagcdn.com/kr.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Hallasan",
+      "meters": 1947
+    }
   },
   {
     "code": "KW",
@@ -3292,7 +3574,8 @@
     "flagImage": "https://flagcdn.com/kw.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "KG",
@@ -3322,7 +3605,11 @@
     "flagImage": "https://flagcdn.com/kg.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Jengish Chokusu",
+      "meters": 7439
+    }
   },
   {
     "code": "LA",
@@ -3352,7 +3639,11 @@
     "flagImage": "https://flagcdn.com/la.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Phou Bia",
+      "meters": 2819
+    }
   },
   {
     "code": "LV",
@@ -3381,7 +3672,11 @@
     "flagImage": "https://flagcdn.com/lv.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Gaiziņkalns",
+      "meters": 312
+    }
   },
   {
     "code": "LB",
@@ -3409,7 +3704,11 @@
     "flagImage": "https://flagcdn.com/lb.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Qurnat as Sawda'",
+      "meters": 3088
+    }
   },
   {
     "code": "LS",
@@ -3436,7 +3735,11 @@
     "flagImage": "https://flagcdn.com/ls.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Thabana Ntlenyana",
+      "meters": 3482
+    }
   },
   {
     "code": "LR",
@@ -3464,7 +3767,8 @@
     "flagImage": "https://flagcdn.com/lr.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "LY",
@@ -3495,7 +3799,8 @@
     "flagImage": "https://flagcdn.com/ly.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "LI",
@@ -3522,7 +3827,8 @@
     "flagImage": "https://flagcdn.com/li.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "LT",
@@ -3551,7 +3857,11 @@
     "flagImage": "https://flagcdn.com/lt.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Aukštojas Hill",
+      "meters": 294
+    }
   },
   {
     "code": "LU",
@@ -3581,7 +3891,11 @@
     "flagImage": "https://flagcdn.com/lu.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Kneiff",
+      "meters": 560
+    }
   },
   {
     "code": "MO",
@@ -3608,7 +3922,8 @@
     "flagImage": "https://flagcdn.com/mo.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "MG",
@@ -3633,7 +3948,11 @@
     "flagImage": "https://flagcdn.com/mg.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Maromokotro",
+      "meters": 2876
+    }
   },
   {
     "code": "MW",
@@ -3662,7 +3981,8 @@
     "flagImage": "https://flagcdn.com/mw.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "MY",
@@ -3690,7 +4010,11 @@
     "flagImage": "https://flagcdn.com/my.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Kinabalu",
+      "meters": 4095
+    }
   },
   {
     "code": "MV",
@@ -3714,7 +4038,8 @@
     "flagImage": "https://flagcdn.com/mv.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "ML",
@@ -3746,7 +4071,8 @@
     "flagImage": "https://flagcdn.com/ml.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "MT",
@@ -3771,7 +4097,8 @@
     "flagImage": "https://flagcdn.com/mt.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "MH",
@@ -3796,7 +4123,8 @@
     "flagImage": "https://flagcdn.com/mh.svg",
     "level": 1,
     "category": "oceania",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "MQ",
@@ -3820,7 +4148,8 @@
     "flagImage": "https://flagcdn.com/mq.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "MR",
@@ -3849,7 +4178,8 @@
     "flagImage": "https://flagcdn.com/mr.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "MU",
@@ -3873,7 +4203,8 @@
     "flagImage": "https://flagcdn.com/mu.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "YT",
@@ -3897,7 +4228,8 @@
     "flagImage": "https://flagcdn.com/yt.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "MX",
@@ -3925,7 +4257,11 @@
     "flagImage": "https://flagcdn.com/mx.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Pico de Orizaba",
+      "meters": 5636
+    }
   },
   {
     "code": "FM",
@@ -3949,7 +4285,8 @@
     "flagImage": "https://flagcdn.com/fm.svg",
     "level": 1,
     "category": "oceania",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "MD",
@@ -3976,7 +4313,11 @@
     "flagImage": "https://flagcdn.com/md.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Bălănești Hill",
+      "meters": 430
+    }
   },
   {
     "code": "MC",
@@ -4002,7 +4343,8 @@
     "flagImage": "https://flagcdn.com/mc.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "MN",
@@ -4029,7 +4371,11 @@
     "flagImage": "https://flagcdn.com/mn.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Khüiten Peak",
+      "meters": 4374
+    }
   },
   {
     "code": "ME",
@@ -4062,7 +4408,11 @@
     "flagImage": "https://flagcdn.com/me.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Zla Kolata",
+      "meters": 2534
+    }
   },
   {
     "code": "MS",
@@ -4086,7 +4436,8 @@
     "flagImage": "https://flagcdn.com/ms.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "MA",
@@ -4114,7 +4465,11 @@
     "flagImage": "https://flagcdn.com/ma.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Jbel Toubkal",
+      "meters": 4167
+    }
   },
   {
     "code": "MZ",
@@ -4145,7 +4500,11 @@
     "flagImage": "https://flagcdn.com/mz.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Monte Binga",
+      "meters": 2436
+    }
   },
   {
     "code": "MM",
@@ -4175,7 +4534,11 @@
     "flagImage": "https://flagcdn.com/mm.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Hkakabo Razi",
+      "meters": 5881
+    }
   },
   {
     "code": "NA",
@@ -4205,7 +4568,11 @@
     "flagImage": "https://flagcdn.com/na.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Königstein",
+      "meters": 2573
+    }
   },
   {
     "code": "NR",
@@ -4230,7 +4597,8 @@
     "flagImage": "https://flagcdn.com/nr.svg",
     "level": 1,
     "category": "oceania",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "NP",
@@ -4257,7 +4625,11 @@
     "flagImage": "https://flagcdn.com/np.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Everest",
+      "meters": 8848.86
+    }
   },
   {
     "code": "NL",
@@ -4284,7 +4656,11 @@
     "flagImage": "https://flagcdn.com/nl.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Vaalserberg",
+      "meters": 322
+    }
   },
   {
     "code": "NC",
@@ -4308,7 +4684,8 @@
     "flagImage": "https://flagcdn.com/nc.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "NZ",
@@ -4333,7 +4710,11 @@
     "flagImage": "https://flagcdn.com/nz.svg",
     "level": 1,
     "category": "oceania",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Aoraki / Mount Cook",
+      "meters": 3724
+    }
   },
   {
     "code": "NI",
@@ -4360,7 +4741,11 @@
     "flagImage": "https://flagcdn.com/ni.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mogotón",
+      "meters": 2107
+    }
   },
   {
     "code": "NE",
@@ -4392,7 +4777,8 @@
     "flagImage": "https://flagcdn.com/ne.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "NG",
@@ -4421,7 +4807,11 @@
     "flagImage": "https://flagcdn.com/ng.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Chappal Waddi",
+      "meters": 2419
+    }
   },
   {
     "code": "NU",
@@ -4445,7 +4835,8 @@
     "flagImage": "https://flagcdn.com/nu.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "NF",
@@ -4469,7 +4860,8 @@
     "flagImage": "https://flagcdn.com/nf.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "MK",
@@ -4499,7 +4891,11 @@
     "flagImage": "https://flagcdn.com/mk.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Korab",
+      "meters": 2764
+    }
   },
   {
     "code": "MP",
@@ -4524,7 +4920,8 @@
     "flagImage": "https://flagcdn.com/mp.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "NO",
@@ -4554,7 +4951,11 @@
     "flagImage": "https://flagcdn.com/no.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Galdhøpiggen",
+      "meters": 2469
+    }
   },
   {
     "code": "OM",
@@ -4582,7 +4983,11 @@
     "flagImage": "https://flagcdn.com/om.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Jebel Shams",
+      "meters": 3009
+    }
   },
   {
     "code": "PK",
@@ -4612,7 +5017,11 @@
     "flagImage": "https://flagcdn.com/pk.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "K2",
+      "meters": 8611
+    }
   },
   {
     "code": "PW",
@@ -4636,7 +5045,8 @@
     "flagImage": "https://flagcdn.com/pw.svg",
     "level": 1,
     "category": "oceania",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "PS",
@@ -4664,7 +5074,8 @@
     "flagImage": "https://flagcdn.com/ps.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "PA",
@@ -4691,7 +5102,11 @@
     "flagImage": "https://flagcdn.com/pa.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Volcán Barú",
+      "meters": 3475
+    }
   },
   {
     "code": "PG",
@@ -4717,7 +5132,8 @@
     "flagImage": "https://flagcdn.com/pg.svg",
     "level": 1,
     "category": "oceania",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "PY",
@@ -4746,7 +5162,11 @@
     "flagImage": "https://flagcdn.com/py.svg",
     "level": 1,
     "category": "south-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Cerro Tres Kandú",
+      "meters": 842
+    }
   },
   {
     "code": "PE",
@@ -4776,7 +5196,11 @@
     "flagImage": "https://flagcdn.com/pe.svg",
     "level": 1,
     "category": "south-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Huascarán",
+      "meters": 6768
+    }
   },
   {
     "code": "PH",
@@ -4800,7 +5224,11 @@
     "flagImage": "https://flagcdn.com/ph.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Apo",
+      "meters": 2954
+    }
   },
   {
     "code": "PN",
@@ -4824,7 +5252,8 @@
     "flagImage": "https://flagcdn.com/pn.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "PL",
@@ -4856,7 +5285,11 @@
     "flagImage": "https://flagcdn.com/pl.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Rysy",
+      "meters": 2499
+    }
   },
   {
     "code": "PT",
@@ -4882,7 +5315,11 @@
     "flagImage": "https://flagcdn.com/pt.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Pico",
+      "meters": 2351
+    }
   },
   {
     "code": "PR",
@@ -4907,7 +5344,8 @@
     "flagImage": "https://flagcdn.com/pr.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "QA",
@@ -4933,7 +5371,11 @@
     "flagImage": "https://flagcdn.com/qa.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Qurayn Abu al Bawl",
+      "meters": 103
+    }
   },
   {
     "code": "XK",
@@ -4963,7 +5405,11 @@
     "flagImage": "https://flagcdn.com/xk.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Đeravica",
+      "meters": 2656
+    }
   },
   {
     "code": "RE",
@@ -4987,7 +5433,8 @@
     "flagImage": "https://flagcdn.com/re.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "RO",
@@ -5017,7 +5464,11 @@
     "flagImage": "https://flagcdn.com/ro.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Moldoveanu Peak",
+      "meters": 2544
+    }
   },
   {
     "code": "RU",
@@ -5056,7 +5507,11 @@
     "flagImage": "https://flagcdn.com/ru.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Elbrus",
+      "meters": 5642
+    }
   },
   {
     "code": "RW",
@@ -5087,7 +5542,11 @@
     "flagImage": "https://flagcdn.com/rw.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Karisimbi",
+      "meters": 4507
+    }
   },
   {
     "code": "BL",
@@ -5111,7 +5570,8 @@
     "flagImage": "https://flagcdn.com/bl.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "SH",
@@ -5135,7 +5595,8 @@
     "flagImage": "https://flagcdn.com/sh.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "KN",
@@ -5159,7 +5620,8 @@
     "flagImage": "https://flagcdn.com/kn.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "LC",
@@ -5183,7 +5645,8 @@
     "flagImage": "https://flagcdn.com/lc.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "MF",
@@ -5212,7 +5675,8 @@
     "flagImage": "https://flagcdn.com/mf.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "PM",
@@ -5236,7 +5700,8 @@
     "flagImage": "https://flagcdn.com/pm.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "VC",
@@ -5260,7 +5725,8 @@
     "flagImage": "https://flagcdn.com/vc.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "WS",
@@ -5285,7 +5751,8 @@
     "flagImage": "https://flagcdn.com/ws.svg",
     "level": 1,
     "category": "oceania",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "SM",
@@ -5311,7 +5778,8 @@
     "flagImage": "https://flagcdn.com/sm.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "ST",
@@ -5335,7 +5803,8 @@
     "flagImage": "https://flagcdn.com/st.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "SA",
@@ -5367,7 +5836,11 @@
     "flagImage": "https://flagcdn.com/sa.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Jabal Sawda",
+      "meters": 3015
+    }
   },
   {
     "code": "SN",
@@ -5397,7 +5870,8 @@
     "flagImage": "https://flagcdn.com/sn.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "RS",
@@ -5430,7 +5904,11 @@
     "flagImage": "https://flagcdn.com/rs.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Midžor",
+      "meters": 2169
+    }
   },
   {
     "code": "SC",
@@ -5455,7 +5933,8 @@
     "flagImage": "https://flagcdn.com/sc.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "SL",
@@ -5482,7 +5961,8 @@
     "flagImage": "https://flagcdn.com/sl.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "SG",
@@ -5509,7 +5989,11 @@
     "flagImage": "https://flagcdn.com/sg.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Bukit Timah Hill",
+      "meters": 164
+    }
   },
   {
     "code": "SX",
@@ -5536,7 +6020,8 @@
     "flagImage": "https://flagcdn.com/sx.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "SK",
@@ -5566,7 +6051,11 @@
     "flagImage": "https://flagcdn.com/sk.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Gerlachovský štít",
+      "meters": 2655
+    }
   },
   {
     "code": "SI",
@@ -5595,7 +6084,11 @@
     "flagImage": "https://flagcdn.com/si.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Triglav",
+      "meters": 2864
+    }
   },
   {
     "code": "SB",
@@ -5619,7 +6112,8 @@
     "flagImage": "https://flagcdn.com/sb.svg",
     "level": 1,
     "category": "oceania",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "SO",
@@ -5648,7 +6142,8 @@
     "flagImage": "https://flagcdn.com/so.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "ZA",
@@ -5688,7 +6183,11 @@
     "flagImage": "https://flagcdn.com/za.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mafadi",
+      "meters": 3450
+    }
   },
   {
     "code": "GS",
@@ -5712,7 +6211,8 @@
     "flagImage": "https://flagcdn.com/gs.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "SS",
@@ -5743,7 +6243,8 @@
     "flagImage": "https://flagcdn.com/ss.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "ES",
@@ -5773,7 +6274,11 @@
     "flagImage": "https://flagcdn.com/es.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Teide",
+      "meters": 3715
+    }
   },
   {
     "code": "LK",
@@ -5800,7 +6305,11 @@
     "flagImage": "https://flagcdn.com/lk.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Pidurutalagala",
+      "meters": 2524
+    }
   },
   {
     "code": "SD",
@@ -5833,7 +6342,8 @@
     "flagImage": "https://flagcdn.com/sd.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "SR",
@@ -5862,7 +6372,8 @@
     "flagImage": "https://flagcdn.com/sr.svg",
     "level": 1,
     "category": "south-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "SJ",
@@ -5886,7 +6397,8 @@
     "flagImage": "https://flagcdn.com/sj.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "SZ",
@@ -5914,7 +6426,8 @@
     "flagImage": "https://flagcdn.com/sz.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "SE",
@@ -5941,7 +6454,11 @@
     "flagImage": "https://flagcdn.com/se.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Kebnekaise (nordtoppen)",
+      "meters": 2097
+    }
   },
   {
     "code": "CH",
@@ -5974,7 +6491,11 @@
     "flagImage": "https://flagcdn.com/ch.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Dufourspitze",
+      "meters": 4634
+    }
   },
   {
     "code": "SY",
@@ -6004,7 +6525,11 @@
     "flagImage": "https://flagcdn.com/sy.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Hermon",
+      "meters": 2814
+    }
   },
   {
     "code": "TW",
@@ -6028,7 +6553,11 @@
     "flagImage": "https://flagcdn.com/tw.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Yu Shan",
+      "meters": 3952
+    }
   },
   {
     "code": "TJ",
@@ -6058,7 +6587,11 @@
     "flagImage": "https://flagcdn.com/tj.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Ismoil Somoni Peak",
+      "meters": 7495
+    }
   },
   {
     "code": "TZ",
@@ -6092,7 +6625,11 @@
     "flagImage": "https://flagcdn.com/tz.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Kilimanjaro",
+      "meters": 5895
+    }
   },
   {
     "code": "TH",
@@ -6121,7 +6658,11 @@
     "flagImage": "https://flagcdn.com/th.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Doi Inthanon",
+      "meters": 2565
+    }
   },
   {
     "code": "TL",
@@ -6147,7 +6688,8 @@
     "flagImage": "https://flagcdn.com/tl.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "TG",
@@ -6175,7 +6717,8 @@
     "flagImage": "https://flagcdn.com/tg.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "TK",
@@ -6199,7 +6742,8 @@
     "flagImage": "https://flagcdn.com/tk.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "TO",
@@ -6224,7 +6768,8 @@
     "flagImage": "https://flagcdn.com/to.svg",
     "level": 1,
     "category": "oceania",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "TT",
@@ -6248,7 +6793,8 @@
     "flagImage": "https://flagcdn.com/tt.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "TN",
@@ -6275,7 +6821,11 @@
     "flagImage": "https://flagcdn.com/tn.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Jebel ech Chambi",
+      "meters": 1544
+    }
   },
   {
     "code": "TR",
@@ -6308,7 +6858,11 @@
     "flagImage": "https://flagcdn.com/tr.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Ararat",
+      "meters": 5137
+    }
   },
   {
     "code": "TM",
@@ -6338,7 +6892,8 @@
     "flagImage": "https://flagcdn.com/tm.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "TC",
@@ -6362,7 +6917,8 @@
     "flagImage": "https://flagcdn.com/tc.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "TV",
@@ -6386,7 +6942,8 @@
     "flagImage": "https://flagcdn.com/tv.svg",
     "level": 1,
     "category": "oceania",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "UG",
@@ -6417,7 +6974,11 @@
     "flagImage": "https://flagcdn.com/ug.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Stanley (Margherita Peak)",
+      "meters": 5109
+    }
   },
   {
     "code": "UA",
@@ -6449,7 +7010,11 @@
     "flagImage": "https://flagcdn.com/ua.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Hoverla",
+      "meters": 2061
+    }
   },
   {
     "code": "AE",
@@ -6476,7 +7041,11 @@
     "flagImage": "https://flagcdn.com/ae.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Jebel Jais",
+      "meters": 1892
+    }
   },
   {
     "code": "GB",
@@ -6502,7 +7071,11 @@
     "flagImage": "https://flagcdn.com/gb.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Ben Nevis",
+      "meters": 1345
+    }
   },
   {
     "code": "UM",
@@ -6523,7 +7096,8 @@
     "flagImage": "https://flagcdn.com/um.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "US",
@@ -6550,7 +7124,11 @@
     "flagImage": "https://flagcdn.com/us.svg",
     "level": 1,
     "category": "north-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Denali",
+      "meters": 6190
+    }
   },
   {
     "code": "UY",
@@ -6577,7 +7155,11 @@
     "flagImage": "https://flagcdn.com/uy.svg",
     "level": 1,
     "category": "south-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Cerro Catedral",
+      "meters": 514
+    }
   },
   {
     "code": "UZ",
@@ -6608,7 +7190,11 @@
     "flagImage": "https://flagcdn.com/uz.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Khazret Sultan",
+      "meters": 4643
+    }
   },
   {
     "code": "VU",
@@ -6634,7 +7220,8 @@
     "flagImage": "https://flagcdn.com/vu.svg",
     "level": 1,
     "category": "oceania",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "VA",
@@ -6663,7 +7250,8 @@
     "flagImage": "https://flagcdn.com/va.svg",
     "level": 1,
     "category": "europe",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": null
   },
   {
     "code": "VE",
@@ -6691,7 +7279,11 @@
     "flagImage": "https://flagcdn.com/ve.svg",
     "level": 1,
     "category": "south-america",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Pico Bolívar",
+      "meters": 4978
+    }
   },
   {
     "code": "VN",
@@ -6719,7 +7311,11 @@
     "flagImage": "https://flagcdn.com/vn.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Fansipan",
+      "meters": 3143
+    }
   },
   {
     "code": "VG",
@@ -6743,7 +7339,8 @@
     "flagImage": "https://flagcdn.com/vg.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "VI",
@@ -6767,7 +7364,8 @@
     "flagImage": "https://flagcdn.com/vi.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "WF",
@@ -6791,7 +7389,8 @@
     "flagImage": "https://flagcdn.com/wf.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "EH",
@@ -6819,7 +7418,8 @@
     "flagImage": "https://flagcdn.com/eh.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   },
   {
     "code": "YE",
@@ -6846,7 +7446,11 @@
     "flagImage": "https://flagcdn.com/ye.svg",
     "level": 1,
     "category": "asia",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Jabal an Nabi Shu'ayb",
+      "meters": 3666
+    }
   },
   {
     "code": "ZM",
@@ -6879,7 +7483,11 @@
     "flagImage": "https://flagcdn.com/zm.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mafinga Central",
+      "meters": 2339
+    }
   },
   {
     "code": "ZW",
@@ -6910,7 +7518,11 @@
     "flagImage": "https://flagcdn.com/zw.svg",
     "level": 1,
     "category": "africa",
-    "placeType": "country"
+    "placeType": "country",
+    "highestPoint": {
+      "name": "Mount Nyangani",
+      "meters": 2592
+    }
   },
   {
     "code": "AX",
@@ -6934,6 +7546,7 @@
     "flagImage": "https://flagcdn.com/ax.svg",
     "level": 1,
     "category": "other",
-    "placeType": "other"
+    "placeType": "other",
+    "highestPoint": null
   }
 ]

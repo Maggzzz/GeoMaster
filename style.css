@@ -1512,3 +1512,46 @@ body:has(#mapView:not([hidden])) main.container { width: 100%; max-width: none; 
  #mapView.map-quiz-active .map-feedback { top: 134px; }
  #mapView .map-game-result .map-game-actions { grid-template-columns: 1fr; }
 }
+
+/* ===================================================
+   GEOMASTER V2 – FASE 5: OVER/UNDER
+=================================================== */
+#higherLowerView { max-width: 900px; margin: 24px auto 110px; }
+#higherLowerView [hidden] { display:none !important; }
+.hl-panel { background: #10213b; border: 1px solid #2c466e; border-radius: 20px; padding: clamp(20px, 4vw, 36px); color: #e5f1ff; }
+.hl-panel h2 { font-size: clamp(28px, 5vw, 42px); margin: 10px 0 14px; }
+.hl-panel p { color: #adc4e3; line-height: 1.6; }
+.hl-settings { display:grid; grid-template-columns: 1fr; gap: 8px; margin: 25px 0 10px; }
+.hl-settings label { font-size: 13px; font-weight: 750; color: #a7c5ed; }
+.hl-settings select { width:100%; min-height:48px; padding:11px; background:#182f52; color:#fff; border:1px solid #42648d; border-radius:10px; font:inherit; margin-bottom:10px; }
+.hl-hint {font-size:13px; min-height:1.5em}
+#hlStart {width:100%; margin-top:18px}
+.hl-top {display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; font-weight:700; font-size:13px;}
+.hl-streak {color:#8bc6ff}.hl-best {color:#c7d7ef}
+.hl-question {text-align:center; font-size:clamp(16px, 3vw, 21px); font-weight:650; margin:24px 0!important;}
+.hl-versus {display:grid; grid-template-columns:minmax(0,1fr) 36px minmax(0,1fr); align-items:center; gap:10px;}
+.hl-country {display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; min-width:0; min-height:260px; background:#172f50; border:1px solid #375c86; border-radius:16px; text-align:center; padding:20px 12px; color:#e7f2ff; font:inherit;}
+.hl-flag {height:72px;display:flex;align-items:center;justify-content:center}.hl-flag-img {max-height:69px;max-width:100px;object-fit:contain}
+.hl-country strong {font-size:clamp(17px,2.5vw,23px);overflow-wrap:anywhere}
+.hl-value {font-size:clamp(17px,2.8vw,24px);font-weight:800;color:#79bafa}
+.hl-country small {color:#b2cbe8;line-height:1.35}.hl-choice {cursor:default;}
+.hl-vs {font-size:13px;font-weight:900;text-align:center;color:#83ace1}
+.hl-feedback {min-height:44px;text-align:center;margin:18px 0 8px!important}.hl-feedback.correct {color:#74ecb3!important}.hl-feedback.wrong {color:#ffb1b7!important}
+.hl-buttons {display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}.hl-buttons button {min-height:52px}
+#hlContinue {display:block;margin:10px auto 0;width:100%}
+.hl-result {text-align:center}.hl-result-actions {display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
+.hl-records-stats {margin-top:20px;padding:20px;background:#10213b;border:1px solid #2c466e;border-radius:18px}
+.hl-records-stats h2 {font-size:20px;margin:0 0 14px}
+.hl-record-row {display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #304462;color:#b7cde9}
+.hl-record-row strong {color:#eaf4ff;white-space:nowrap}
+.higher-lower-home-card {border-color:#315f90}
+@media(max-width:700px) {
+ #higherLowerView {margin:7px 0 100px;padding:0 10px}
+ .hl-panel {padding:16px 12px}
+ .hl-versus {grid-template-columns:minmax(0,1fr) 20px minmax(0,1fr);gap:4px}
+ .hl-country {padding:15px 6px;min-height:210px;gap:9px}
+ .hl-flag {height:52px}.hl-flag-img {max-height:50px;max-width:70px}
+ .hl-country strong {font-size:15px}.hl-value {font-size:16px}
+ .hl-vs {font-size:10px}.hl-top{font-size:11px}
+ .hl-result-actions{grid-template-columns:1fr}
+}
