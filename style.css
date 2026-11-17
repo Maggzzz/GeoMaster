@@ -1555,3 +1555,19 @@ body:has(#mapView:not([hidden])) main.container { width: 100%; max-width: none; 
  .hl-vs {font-size:10px}.hl-top{font-size:11px}
  .hl-result-actions{grid-template-columns:1fr}
 }
+
+/* Release candidate: update prompt (does not alter game layout). */
+.app-update-notice[hidden] { display: none !important; }
+.app-update-notice {
+  position: fixed; top: calc(10px + env(safe-area-inset-top));
+  left: 50%; transform: translateX(-50%); width: min(95vw, 520px);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 10px; z-index: 2147483647; border-radius: 14px;
+  background: #122b4f; color: #f0f7ff; border: 1px solid #4b8dcc;
+  padding: 12px; box-shadow: 0 10px 28px #0008; font-size: 13px;
+}
+.app-update-notice button {
+  border: 1px solid #578fca; border-radius: 8px; padding: 8px 10px;
+  color: white; background: #1e568c; font: inherit; cursor: pointer;
+}
+#appUpdateDismiss { background: transparent; font-size: 19px; line-height: 1; }

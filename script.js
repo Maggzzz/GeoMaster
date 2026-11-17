@@ -1184,24 +1184,49 @@ loadCountries().catch(error => {
   elements.feedback.className = "feedback wrong";
 });
 
-// Register GeoMaster service worker
+// PWA update management – show an opt-in update instead of interrupting a quiz.
 if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-        navigator.serviceWorker
-            .register("./service-worker.js")
-            .then(registration => {
-                console.log(
-                    "GeoMaster service worker registered:",
-                    registration.scope
-                );
-            })
-            .catch(error => {
-                console.error(
-                    "GeoMaster service worker registration failed:",
-                    error
-                );
-            });
+  window.addEventListener("load", () => {
+    const notice = document.getElementById("appUpdateNotice");
+    const updateButton = document.getElementById("appUpdateButton");
+    const dismissButton = document.getElementById("appUpdateDismiss");
+    let waitingWorker = null;
+    let updateRequested = false;
+
+    function offerUpdate(worker) {
+      if (!navigator.serviceWorker.controller || !worker) return;
+      waitingWorker = worker;
+      notice.hidden = false;
+    }
+    updateButton.addEventListener("click", () => {
+      if (!waitingWorker) return;
+      updateRequested = true;
+      updateButton.disabled = true;
+      waitingWorker.postMessage({ type: "SKIP_WAITING" });
     });
+    dismissButton.addEventListener("click", () => { notice.hidden = true; });
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      if (updateRequested) window.location.reload();
+    });
+
+    navigator.serviceWorker.register("./service-worker.js")
+      .then(registration => {
+        if (registration.waiting) offerUpdate(registration.waiting);
+        registration.addEventListener("updatefound", () => {
+          const worker = registration.installing;
+          if (!worker) return;
+          worker.addEventListener("statechange", () => {
+            if (worker.state === "installed") offerUpdate(registration.waiting || worker);
+          });
+        });
+        // Check for new releases on launch and when returning to the app.
+        registration.update().catch(() => {});
+        document.addEventListener("visibilitychange", () => {
+          if (!document.hidden) registration.update().catch(() => {});
+        });
+      })
+      .catch(error => console.warn("GeoMaster PWA kunne ikke registreres:", error));
+  });
 }
 // Skjul kartmodusvelgeren når kartet brukes til utforsking
 function updateMapInterface() {
