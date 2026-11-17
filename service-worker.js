@@ -1,5 +1,5 @@
 
-const CACHE_NAME = "geomaster-v1";
+const CACHE_NAME = "geomaster-v2-phase12";
 
 // Find the project root dynamically.
 // This also works when hosted on GitHub Pages
@@ -14,6 +14,7 @@ const APP_FILES = [
     "./manifest.webmanifest",
     "./assets/icons/icon-192.png",
     "./assets/icons/icon-512.png",
+    "./assets/images/earth.png",
     "./data/countries.json"
 ].map(path => new URL(path, BASE_URL).href);
 

@@ -1384,3 +1384,62 @@ body {
         -webkit-overflow-scrolling: touch;
     }
 }
+
+/* ===== GeoMaster v2: fase 1 + 2 – rent kart og felles kategorier ===== */
+/* Kartet fyller hele innholdsområdet. Kartets zoomkontroller beholdes. */
+body:has(#mapView:not([hidden])) { overflow: hidden; padding-bottom: 0; }
+body:has(#mapView:not([hidden])) .topbar,
+body:has(#mapView:not([hidden])) footer { display: none !important; }
+body:has(#mapView:not([hidden])) main.container { width: 100%; max-width: none; margin: 0; }
+#mapView:not([hidden]) {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2100;
+  width: 100% !important;
+  height: 100dvh !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: #0b1425;
+  overflow: hidden;
+}
+#mapView .map-section { position: relative; display: block !important; width: 100%; height: 100%; padding: 0 !important; margin: 0 !important; }
+#mapView .section-heading,
+#mapView .map-attribution-note { display: none !important; }
+#mapView #worldMap {
+  position: absolute; inset: 0; width: 100% !important; height: 100% !important;
+  max-height: none !important; min-height: 0 !important;
+  border: none; border-radius: 0; z-index: 1;
+}
+#mapView .map-toolbar { position: absolute; top: max(12px, env(safe-area-inset-top)); left: 50%; transform: translateX(-50%); z-index: 1100; display: flex; align-items: center; justify-content: center; gap: 9px; margin: 0; width: min(90vw, 660px); pointer-events: none; }
+#mapView .map-toolbar > * { pointer-events: auto; }
+#mapView .map-quiz-prompt { flex: initial; min-width: 0; width: auto; padding: 12px 16px; text-align: center; background: rgba(13,29,53,.94); backdrop-filter: blur(10px); box-shadow: 0 6px 25px #0005; }
+#mapView .map-mode-field { display: none !important; }
+#mapView .map-region-field { display: grid; gap: 4px; background: rgba(13,29,53,.94); border: 1px solid #30466c; border-radius: 11px; padding: 6px 10px; color: #a9c4ee; font-size: 10px; white-space: nowrap; }
+#mapView .map-region-field[hidden] { display: none !important; }
+#mapView .map-region-field select { max-width: 150px; background: #142642; color: #fff; border: none; padding: 3px; font-size: 12px; }
+#mapView .map-next { width: auto !important; padding: 12px 14px; }
+#mapView .map-next[hidden] { display: none !important; }
+#mapView .map-feedback { position: absolute; z-index: 1090; top: 68px; left: 50%; transform: translateX(-50%); width: max-content; max-width: 90vw; margin: 0; padding: 6px 12px; border-radius: 8px; color: #dbe8ff; background: rgba(10,21,40,.84); font-size: 12px; text-align: center; }
+#mapView.map-explore-only .map-toolbar,
+#mapView.map-explore-only .map-feedback { display: none !important; }
+/* Infokortet åpnes kun når brukeren velger et land. */
+#mapView .map-selected { position: absolute; z-index: 1200; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 12px; width: min(440px, calc(100% - 28px)); padding: 16px; border: 1px solid #3e638c; border-radius: 16px; background: rgba(12,27,48,.96); box-shadow: 0 12px 40px #0009; color: #dae8fa; }
+#mapView .map-selected[hidden] { display: none !important; }
+#mapView .map-selected > span:nth-child(2) { flex: 1; min-width: 0; line-height: 1.6; }
+#mapView .map-selected strong { display: block; font-size: 16px; }
+#mapView .map-popup-close { align-self: flex-start; background: transparent; border: 0; color: #d7e7fa; font-size: 26px; line-height: 1; cursor: pointer; }
+#mapView .map-exit-button { position: absolute; z-index: 1150; top: 16px; left: 16px; width: 42px; height: 42px; border: 1px solid #365278; border-radius: 11px; color: white; background: rgba(12,27,48,.92); font-size: 23px; cursor: pointer; }
+#mapView .leaflet-top.leaflet-left { top: 58px; }
+#mapView .leaflet-control-attribution { font-size: 9px; }
+@media (max-width:700px) {
+  #mapView:not([hidden]) { bottom: calc(68px + env(safe-area-inset-bottom)) !important; height: calc(100dvh - 68px - env(safe-area-inset-bottom)) !important; z-index: 1900; }
+  #mapView .map-exit-button { display: none; }
+  #mapView .leaflet-top.leaflet-left { top: 8px; }
+  #mapView .map-toolbar { top: max(8px, env(safe-area-inset-top)); width: calc(100% - 80px); left: auto; right: 8px; transform: none; flex-wrap: wrap; justify-content: flex-end; }
+  #mapView .map-quiz-prompt { order: 0; max-width: 100%; font-size: 12px; padding: 10px; }
+  #mapView .map-next { order: 2; font-size: 12px; padding: 8px 12px; }
+  #mapView .map-region-field { order: 1; }
+  #mapView .map-feedback { top: 105px; }
+  #mapView .map-selected { bottom: 12px; }
+  /* Bunnmenyen gir navigasjon ut av kartet uten ekstra kartknapper. */
+}

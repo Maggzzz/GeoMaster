@@ -28,7 +28,9 @@
       65
     ],
     "flagImage": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "AL",
@@ -55,7 +57,9 @@
       20
     ],
     "flagImage": "https://flagcdn.com/al.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "DZ",
@@ -85,7 +89,9 @@
       3
     ],
     "flagImage": "https://flagcdn.com/dz.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "AS",
@@ -108,7 +114,9 @@
       -170
     ],
     "flagImage": "https://flagcdn.com/as.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "AD",
@@ -133,7 +141,9 @@
       1.5
     ],
     "flagImage": "https://flagcdn.com/ad.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "AO",
@@ -160,7 +170,9 @@
       18.5
     ],
     "flagImage": "https://flagcdn.com/ao.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "AI",
@@ -182,7 +194,9 @@
       -63.16666666
     ],
     "flagImage": "https://flagcdn.com/ai.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "AQ",
@@ -205,7 +219,9 @@
       4.48
     ],
     "flagImage": "https://flagcdn.com/aq.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "AG",
@@ -227,7 +243,9 @@
       -61.8
     ],
     "flagImage": "https://flagcdn.com/ag.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "AR",
@@ -256,7 +274,9 @@
       -64
     ],
     "flagImage": "https://flagcdn.com/ar.svg",
-    "level": 1
+    "level": 1,
+    "category": "south-america",
+    "placeType": "country"
   },
   {
     "code": "AM",
@@ -283,7 +303,9 @@
       45
     ],
     "flagImage": "https://flagcdn.com/am.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "AW",
@@ -306,7 +328,9 @@
       -69.96666666
     ],
     "flagImage": "https://flagcdn.com/aw.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "AU",
@@ -328,7 +352,9 @@
       133
     ],
     "flagImage": "https://flagcdn.com/au.svg",
-    "level": 1
+    "level": 1,
+    "category": "oceania",
+    "placeType": "country"
   },
   {
     "code": "AT",
@@ -359,7 +385,9 @@
       13.33333333
     ],
     "flagImage": "https://flagcdn.com/at.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "AZ",
@@ -387,7 +415,9 @@
       47.5
     ],
     "flagImage": "https://flagcdn.com/az.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "BS",
@@ -409,7 +439,9 @@
       -76
     ],
     "flagImage": "https://flagcdn.com/bs.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "BH",
@@ -431,7 +463,9 @@
       50.55
     ],
     "flagImage": "https://flagcdn.com/bh.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "BD",
@@ -456,7 +490,9 @@
       90
     ],
     "flagImage": "https://flagcdn.com/bd.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "BB",
@@ -478,7 +514,9 @@
       -59.53333333
     ],
     "flagImage": "https://flagcdn.com/bb.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "BY",
@@ -507,7 +545,9 @@
       28
     ],
     "flagImage": "https://flagcdn.com/by.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "BE",
@@ -536,7 +576,9 @@
       4
     ],
     "flagImage": "https://flagcdn.com/be.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "BZ",
@@ -562,7 +604,9 @@
       -88.75
     ],
     "flagImage": "https://flagcdn.com/bz.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "BJ",
@@ -589,7 +633,9 @@
       2.25
     ],
     "flagImage": "https://flagcdn.com/bj.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "BM",
@@ -611,7 +657,9 @@
       -64.75
     ],
     "flagImage": "https://flagcdn.com/bm.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "BT",
@@ -636,7 +684,9 @@
       90.5
     ],
     "flagImage": "https://flagcdn.com/bt.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "BO",
@@ -666,7 +716,9 @@
       -65
     ],
     "flagImage": "https://flagcdn.com/bo.svg",
-    "level": 1
+    "level": 1,
+    "category": "south-america",
+    "placeType": "country"
   },
   {
     "code": "BQ",
@@ -688,7 +740,9 @@
       -68.266667
     ],
     "flagImage": "https://flagcdn.com/bq.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "BA",
@@ -716,7 +770,9 @@
       18
     ],
     "flagImage": "https://flagcdn.com/ba.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "BW",
@@ -744,7 +800,9 @@
       24
     ],
     "flagImage": "https://flagcdn.com/bw.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "BV",
@@ -768,7 +826,9 @@
       3.4
     ],
     "flagImage": "https://flagcdn.com/bv.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "BR",
@@ -802,7 +862,9 @@
       -55
     ],
     "flagImage": "https://flagcdn.com/br.svg",
-    "level": 1
+    "level": 1,
+    "category": "south-america",
+    "placeType": "country"
   },
   {
     "code": "IO",
@@ -824,7 +886,9 @@
       71.5
     ],
     "flagImage": "https://flagcdn.com/io.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "BN",
@@ -848,7 +912,9 @@
       114.66666666
     ],
     "flagImage": "https://flagcdn.com/bn.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "BG",
@@ -876,7 +942,9 @@
       25
     ],
     "flagImage": "https://flagcdn.com/bg.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "BF",
@@ -906,7 +974,9 @@
       -2
     ],
     "flagImage": "https://flagcdn.com/bf.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "BI",
@@ -933,7 +1003,9 @@
       30
     ],
     "flagImage": "https://flagcdn.com/bi.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "CV",
@@ -955,7 +1027,9 @@
       -24
     ],
     "flagImage": "https://flagcdn.com/cv.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "KH",
@@ -981,7 +1055,9 @@
       105
     ],
     "flagImage": "https://flagcdn.com/kh.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "CM",
@@ -1011,7 +1087,9 @@
       12
     ],
     "flagImage": "https://flagcdn.com/cm.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "CA",
@@ -1036,7 +1114,9 @@
       -95
     ],
     "flagImage": "https://flagcdn.com/ca.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "KY",
@@ -1058,7 +1138,9 @@
       -80.5
     ],
     "flagImage": "https://flagcdn.com/ky.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "CF",
@@ -1088,7 +1170,9 @@
       21
     ],
     "flagImage": "https://flagcdn.com/cf.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "TD",
@@ -1118,7 +1202,9 @@
       19
     ],
     "flagImage": "https://flagcdn.com/td.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "CL",
@@ -1144,7 +1230,9 @@
       -71
     ],
     "flagImage": "https://flagcdn.com/cl.svg",
-    "level": 1
+    "level": 1,
+    "category": "south-america",
+    "placeType": "country"
   },
   {
     "code": "CN",
@@ -1183,7 +1271,9 @@
       105
     ],
     "flagImage": "https://flagcdn.com/cn.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "CX",
@@ -1205,7 +1295,9 @@
       105.66666666
     ],
     "flagImage": "https://flagcdn.com/cx.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "CC",
@@ -1227,7 +1319,9 @@
       96.83333333
     ],
     "flagImage": "https://flagcdn.com/cc.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "CO",
@@ -1255,7 +1349,9 @@
       -72
     ],
     "flagImage": "https://flagcdn.com/co.svg",
-    "level": 1
+    "level": 1,
+    "category": "south-america",
+    "placeType": "country"
   },
   {
     "code": "KM",
@@ -1278,7 +1374,9 @@
       44.25
     ],
     "flagImage": "https://flagcdn.com/km.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "CG",
@@ -1307,7 +1405,9 @@
       15
     ],
     "flagImage": "https://flagcdn.com/cg.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "CD",
@@ -1343,7 +1443,9 @@
       25
     ],
     "flagImage": "https://flagcdn.com/cd.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "CK",
@@ -1366,7 +1468,9 @@
       -159.76666666
     ],
     "flagImage": "https://flagcdn.com/ck.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "CR",
@@ -1391,7 +1495,9 @@
       -84
     ],
     "flagImage": "https://flagcdn.com/cr.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "HR",
@@ -1419,7 +1525,9 @@
       15.5
     ],
     "flagImage": "https://flagcdn.com/hr.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "CU",
@@ -1441,7 +1549,9 @@
       -80
     ],
     "flagImage": "https://flagcdn.com/cu.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "CW",
@@ -1465,7 +1575,9 @@
       -68.933333
     ],
     "flagImage": "https://flagcdn.com/cw.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "CY",
@@ -1491,7 +1603,9 @@
       33
     ],
     "flagImage": "https://flagcdn.com/cy.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "CZ",
@@ -1514,7 +1628,9 @@
       15.5
     ],
     "flagImage": "https://flagcdn.com/cz.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "DK",
@@ -1538,7 +1654,9 @@
       10
     ],
     "flagImage": "https://flagcdn.com/dk.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "DJ",
@@ -1565,7 +1683,9 @@
       43
     ],
     "flagImage": "https://flagcdn.com/dj.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "DM",
@@ -1587,7 +1707,9 @@
       -61.33333333
     ],
     "flagImage": "https://flagcdn.com/dm.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "DO",
@@ -1611,7 +1733,9 @@
       -70.66666666
     ],
     "flagImage": "https://flagcdn.com/do.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "EC",
@@ -1636,7 +1760,9 @@
       -77.5
     ],
     "flagImage": "https://flagcdn.com/ec.svg",
-    "level": 1
+    "level": 1,
+    "category": "south-america",
+    "placeType": "country"
   },
   {
     "code": "EG",
@@ -1662,7 +1788,9 @@
       30
     ],
     "flagImage": "https://flagcdn.com/eg.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "SV",
@@ -1687,7 +1815,9 @@
       -88.91666666
     ],
     "flagImage": "https://flagcdn.com/sv.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "GQ",
@@ -1715,7 +1845,9 @@
       10
     ],
     "flagImage": "https://flagcdn.com/gq.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "ER",
@@ -1749,7 +1881,9 @@
       39
     ],
     "flagImage": "https://flagcdn.com/er.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "EE",
@@ -1774,7 +1908,9 @@
       26
     ],
     "flagImage": "https://flagcdn.com/ee.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "ET",
@@ -1803,7 +1939,9 @@
       38
     ],
     "flagImage": "https://flagcdn.com/et.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "FK",
@@ -1825,7 +1963,9 @@
       -59
     ],
     "flagImage": "https://flagcdn.com/fk.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "FO",
@@ -1847,7 +1987,9 @@
       -7
     ],
     "flagImage": "https://flagcdn.com/fo.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "FJ",
@@ -1872,7 +2014,9 @@
       175
     ],
     "flagImage": "https://flagcdn.com/fj.svg",
-    "level": 1
+    "level": 1,
+    "category": "oceania",
+    "placeType": "country"
   },
   {
     "code": "FI",
@@ -1899,7 +2043,9 @@
       26
     ],
     "flagImage": "https://flagcdn.com/fi.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "FR",
@@ -1930,7 +2076,9 @@
       2
     ],
     "flagImage": "https://flagcdn.com/fr.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "GF",
@@ -1955,7 +2103,9 @@
       -53
     ],
     "flagImage": "https://flagcdn.com/gf.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "PF",
@@ -1977,7 +2127,9 @@
       -140
     ],
     "flagImage": "https://flagcdn.com/pf.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "TF",
@@ -1999,7 +2151,9 @@
       69.167
     ],
     "flagImage": "https://flagcdn.com/tf.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "GA",
@@ -2025,7 +2179,9 @@
       11.75
     ],
     "flagImage": "https://flagcdn.com/ga.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "GM",
@@ -2049,7 +2205,9 @@
       -16.56666666
     ],
     "flagImage": "https://flagcdn.com/gm.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "GE",
@@ -2076,7 +2234,9 @@
       43.5
     ],
     "flagImage": "https://flagcdn.com/ge.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "DE",
@@ -2108,7 +2268,9 @@
       9
     ],
     "flagImage": "https://flagcdn.com/de.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "GH",
@@ -2134,7 +2296,9 @@
       -2
     ],
     "flagImage": "https://flagcdn.com/gh.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "GI",
@@ -2158,7 +2322,9 @@
       -5.35
     ],
     "flagImage": "https://flagcdn.com/gi.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "GR",
@@ -2185,7 +2351,9 @@
       22
     ],
     "flagImage": "https://flagcdn.com/gr.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "GL",
@@ -2207,7 +2375,9 @@
       -40
     ],
     "flagImage": "https://flagcdn.com/gl.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "GD",
@@ -2229,7 +2399,9 @@
       -61.66666666
     ],
     "flagImage": "https://flagcdn.com/gd.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "GP",
@@ -2251,7 +2423,9 @@
       -61.583333
     ],
     "flagImage": "https://flagcdn.com/gp.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "GU",
@@ -2275,7 +2449,9 @@
       144.78333333
     ],
     "flagImage": "https://flagcdn.com/gu.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "GT",
@@ -2302,7 +2478,9 @@
       -90.25
     ],
     "flagImage": "https://flagcdn.com/gt.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "GG",
@@ -2325,7 +2503,9 @@
       -2.58333333
     ],
     "flagImage": "https://flagcdn.com/gg.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "GN",
@@ -2355,7 +2535,9 @@
       -10
     ],
     "flagImage": "https://flagcdn.com/gn.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "GW",
@@ -2380,7 +2562,9 @@
       -15
     ],
     "flagImage": "https://flagcdn.com/gw.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "GY",
@@ -2406,7 +2590,9 @@
       -59
     ],
     "flagImage": "https://flagcdn.com/gy.svg",
-    "level": 1
+    "level": 1,
+    "category": "south-america",
+    "placeType": "country"
   },
   {
     "code": "HT",
@@ -2431,7 +2617,9 @@
       -72.41666666
     ],
     "flagImage": "https://flagcdn.com/ht.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "HM",
@@ -2453,7 +2641,9 @@
       72.51666666
     ],
     "flagImage": "https://flagcdn.com/hm.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "HN",
@@ -2479,7 +2669,9 @@
       -86.5
     ],
     "flagImage": "https://flagcdn.com/hn.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "HK",
@@ -2504,7 +2696,9 @@
       114.16666666
     ],
     "flagImage": "https://flagcdn.com/hk.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "HU",
@@ -2534,7 +2728,9 @@
       20
     ],
     "flagImage": "https://flagcdn.com/hu.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "IS",
@@ -2556,7 +2752,9 @@
       -18
     ],
     "flagImage": "https://flagcdn.com/is.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "IN",
@@ -2588,7 +2786,9 @@
       77
     ],
     "flagImage": "https://flagcdn.com/in.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "ID",
@@ -2614,7 +2814,9 @@
       120
     ],
     "flagImage": "https://flagcdn.com/id.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "IR",
@@ -2644,7 +2846,9 @@
       53
     ],
     "flagImage": "https://flagcdn.com/ir.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "IQ",
@@ -2674,7 +2878,9 @@
       44
     ],
     "flagImage": "https://flagcdn.com/iq.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "IE",
@@ -2699,7 +2905,9 @@
       -8
     ],
     "flagImage": "https://flagcdn.com/ie.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "IM",
@@ -2722,7 +2930,9 @@
       -4.5
     ],
     "flagImage": "https://flagcdn.com/im.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "IL",
@@ -2750,7 +2960,9 @@
       34.75
     ],
     "flagImage": "https://flagcdn.com/il.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "IT",
@@ -2779,7 +2991,9 @@
       12.83333333
     ],
     "flagImage": "https://flagcdn.com/it.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "CI",
@@ -2807,7 +3021,9 @@
       -5
     ],
     "flagImage": "https://flagcdn.com/ci.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "JM",
@@ -2829,7 +3045,9 @@
       -77.5
     ],
     "flagImage": "https://flagcdn.com/jm.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "JP",
@@ -2851,7 +3069,9 @@
       138
     ],
     "flagImage": "https://flagcdn.com/jp.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "JE",
@@ -2874,7 +3094,9 @@
       -2.16666666
     ],
     "flagImage": "https://flagcdn.com/je.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "JO",
@@ -2901,7 +3123,9 @@
       36
     ],
     "flagImage": "https://flagcdn.com/jo.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "KZ",
@@ -2930,7 +3154,9 @@
       68
     ],
     "flagImage": "https://flagcdn.com/kz.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "KE",
@@ -2959,7 +3185,9 @@
       38
     ],
     "flagImage": "https://flagcdn.com/ke.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "KI",
@@ -2981,7 +3209,9 @@
       173
     ],
     "flagImage": "https://flagcdn.com/ki.svg",
-    "level": 1
+    "level": 1,
+    "category": "oceania",
+    "placeType": "country"
   },
   {
     "code": "KP",
@@ -3007,7 +3237,9 @@
       127
     ],
     "flagImage": "https://flagcdn.com/kp.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "KR",
@@ -3031,7 +3263,9 @@
       127.5
     ],
     "flagImage": "https://flagcdn.com/kr.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "KW",
@@ -3056,7 +3290,9 @@
       45.75
     ],
     "flagImage": "https://flagcdn.com/kw.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "KG",
@@ -3084,7 +3320,9 @@
       75
     ],
     "flagImage": "https://flagcdn.com/kg.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "LA",
@@ -3112,7 +3350,9 @@
       105
     ],
     "flagImage": "https://flagcdn.com/la.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "LV",
@@ -3139,7 +3379,9 @@
       25
     ],
     "flagImage": "https://flagcdn.com/lv.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "LB",
@@ -3165,7 +3407,9 @@
       35.83333333
     ],
     "flagImage": "https://flagcdn.com/lb.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "LS",
@@ -3190,7 +3434,9 @@
       28.5
     ],
     "flagImage": "https://flagcdn.com/ls.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "LR",
@@ -3216,7 +3462,9 @@
       -9.5
     ],
     "flagImage": "https://flagcdn.com/lr.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "LY",
@@ -3245,7 +3493,9 @@
       17
     ],
     "flagImage": "https://flagcdn.com/ly.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "LI",
@@ -3270,7 +3520,9 @@
       9.53333333
     ],
     "flagImage": "https://flagcdn.com/li.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "LT",
@@ -3297,7 +3549,9 @@
       24
     ],
     "flagImage": "https://flagcdn.com/lt.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "LU",
@@ -3325,7 +3579,9 @@
       6.16666666
     ],
     "flagImage": "https://flagcdn.com/lu.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "MO",
@@ -3350,7 +3606,9 @@
       113.55
     ],
     "flagImage": "https://flagcdn.com/mo.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "MG",
@@ -3373,7 +3631,9 @@
       47
     ],
     "flagImage": "https://flagcdn.com/mg.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "MW",
@@ -3400,7 +3660,9 @@
       34
     ],
     "flagImage": "https://flagcdn.com/mw.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "MY",
@@ -3426,7 +3688,9 @@
       112.5
     ],
     "flagImage": "https://flagcdn.com/my.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "MV",
@@ -3448,7 +3712,9 @@
       73
     ],
     "flagImage": "https://flagcdn.com/mv.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "ML",
@@ -3478,7 +3744,9 @@
       -4
     ],
     "flagImage": "https://flagcdn.com/ml.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "MT",
@@ -3501,7 +3769,9 @@
       14.58333333
     ],
     "flagImage": "https://flagcdn.com/mt.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "MH",
@@ -3524,7 +3794,9 @@
       168
     ],
     "flagImage": "https://flagcdn.com/mh.svg",
-    "level": 1
+    "level": 1,
+    "category": "oceania",
+    "placeType": "country"
   },
   {
     "code": "MQ",
@@ -3546,7 +3818,9 @@
       -61
     ],
     "flagImage": "https://flagcdn.com/mq.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "MR",
@@ -3573,7 +3847,9 @@
       -12
     ],
     "flagImage": "https://flagcdn.com/mr.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "MU",
@@ -3595,7 +3871,9 @@
       57.55
     ],
     "flagImage": "https://flagcdn.com/mu.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "YT",
@@ -3617,7 +3895,9 @@
       45.16666666
     ],
     "flagImage": "https://flagcdn.com/yt.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "MX",
@@ -3643,7 +3923,9 @@
       -102
     ],
     "flagImage": "https://flagcdn.com/mx.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "FM",
@@ -3665,7 +3947,9 @@
       158.25
     ],
     "flagImage": "https://flagcdn.com/fm.svg",
-    "level": 1
+    "level": 1,
+    "category": "oceania",
+    "placeType": "country"
   },
   {
     "code": "MD",
@@ -3690,7 +3974,9 @@
       29
     ],
     "flagImage": "https://flagcdn.com/md.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "MC",
@@ -3714,7 +4000,9 @@
       7.4
     ],
     "flagImage": "https://flagcdn.com/mc.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "MN",
@@ -3739,7 +4027,9 @@
       105
     ],
     "flagImage": "https://flagcdn.com/mn.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "ME",
@@ -3770,7 +4060,9 @@
       19.3
     ],
     "flagImage": "https://flagcdn.com/me.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "MS",
@@ -3792,7 +4084,9 @@
       -62.2
     ],
     "flagImage": "https://flagcdn.com/ms.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "MA",
@@ -3818,7 +4112,9 @@
       -5
     ],
     "flagImage": "https://flagcdn.com/ma.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "MZ",
@@ -3847,7 +4143,9 @@
       35
     ],
     "flagImage": "https://flagcdn.com/mz.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "MM",
@@ -3875,7 +4173,9 @@
       98
     ],
     "flagImage": "https://flagcdn.com/mm.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "NA",
@@ -3903,7 +4203,9 @@
       17
     ],
     "flagImage": "https://flagcdn.com/na.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "NR",
@@ -3926,7 +4228,9 @@
       166.91666666
     ],
     "flagImage": "https://flagcdn.com/nr.svg",
-    "level": 1
+    "level": 1,
+    "category": "oceania",
+    "placeType": "country"
   },
   {
     "code": "NP",
@@ -3951,7 +4255,9 @@
       84
     ],
     "flagImage": "https://flagcdn.com/np.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "NL",
@@ -3976,7 +4282,9 @@
       5.75
     ],
     "flagImage": "https://flagcdn.com/nl.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "NC",
@@ -3998,7 +4306,9 @@
       165.5
     ],
     "flagImage": "https://flagcdn.com/nc.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "NZ",
@@ -4021,7 +4331,9 @@
       174
     ],
     "flagImage": "https://flagcdn.com/nz.svg",
-    "level": 1
+    "level": 1,
+    "category": "oceania",
+    "placeType": "country"
   },
   {
     "code": "NI",
@@ -4046,7 +4358,9 @@
       -85
     ],
     "flagImage": "https://flagcdn.com/ni.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "NE",
@@ -4076,7 +4390,9 @@
       8
     ],
     "flagImage": "https://flagcdn.com/ne.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "NG",
@@ -4103,7 +4419,9 @@
       8
     ],
     "flagImage": "https://flagcdn.com/ng.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "NU",
@@ -4125,7 +4443,9 @@
       -169.86666666
     ],
     "flagImage": "https://flagcdn.com/nu.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "NF",
@@ -4147,7 +4467,9 @@
       167.95
     ],
     "flagImage": "https://flagcdn.com/nf.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "MK",
@@ -4175,7 +4497,9 @@
       22
     ],
     "flagImage": "https://flagcdn.com/mk.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "MP",
@@ -4198,7 +4522,9 @@
       145.75
     ],
     "flagImage": "https://flagcdn.com/mp.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "NO",
@@ -4226,7 +4552,9 @@
       10
     ],
     "flagImage": "https://flagcdn.com/no.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "OM",
@@ -4252,7 +4580,9 @@
       57
     ],
     "flagImage": "https://flagcdn.com/om.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "PK",
@@ -4280,7 +4610,9 @@
       70
     ],
     "flagImage": "https://flagcdn.com/pk.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "PW",
@@ -4302,7 +4634,9 @@
       134.5
     ],
     "flagImage": "https://flagcdn.com/pw.svg",
-    "level": 1
+    "level": 1,
+    "category": "oceania",
+    "placeType": "country"
   },
   {
     "code": "PS",
@@ -4328,7 +4662,9 @@
       35.2
     ],
     "flagImage": "https://flagcdn.com/ps.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "PA",
@@ -4353,7 +4689,9 @@
       -80
     ],
     "flagImage": "https://flagcdn.com/pa.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "PG",
@@ -4377,7 +4715,9 @@
       147
     ],
     "flagImage": "https://flagcdn.com/pg.svg",
-    "level": 1
+    "level": 1,
+    "category": "oceania",
+    "placeType": "country"
   },
   {
     "code": "PY",
@@ -4404,7 +4744,9 @@
       -58
     ],
     "flagImage": "https://flagcdn.com/py.svg",
-    "level": 1
+    "level": 1,
+    "category": "south-america",
+    "placeType": "country"
   },
   {
     "code": "PE",
@@ -4432,7 +4774,9 @@
       -76
     ],
     "flagImage": "https://flagcdn.com/pe.svg",
-    "level": 1
+    "level": 1,
+    "category": "south-america",
+    "placeType": "country"
   },
   {
     "code": "PH",
@@ -4454,7 +4798,9 @@
       122
     ],
     "flagImage": "https://flagcdn.com/ph.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "PN",
@@ -4476,7 +4822,9 @@
       -130.1
     ],
     "flagImage": "https://flagcdn.com/pn.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "PL",
@@ -4506,7 +4854,9 @@
       20
     ],
     "flagImage": "https://flagcdn.com/pl.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "PT",
@@ -4530,7 +4880,9 @@
       -8
     ],
     "flagImage": "https://flagcdn.com/pt.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "PR",
@@ -4553,7 +4905,9 @@
       -66.5
     ],
     "flagImage": "https://flagcdn.com/pr.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "QA",
@@ -4577,7 +4931,9 @@
       51.25
     ],
     "flagImage": "https://flagcdn.com/qa.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "XK",
@@ -4605,7 +4961,9 @@
       21.166667
     ],
     "flagImage": "https://flagcdn.com/xk.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "RE",
@@ -4627,7 +4985,9 @@
       55.5
     ],
     "flagImage": "https://flagcdn.com/re.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "RO",
@@ -4655,7 +5015,9 @@
       25
     ],
     "flagImage": "https://flagcdn.com/ro.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "RU",
@@ -4692,7 +5054,9 @@
       100
     ],
     "flagImage": "https://flagcdn.com/ru.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "RW",
@@ -4721,7 +5085,9 @@
       30
     ],
     "flagImage": "https://flagcdn.com/rw.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "BL",
@@ -4743,7 +5109,9 @@
       -63.41666666
     ],
     "flagImage": "https://flagcdn.com/bl.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "SH",
@@ -4765,7 +5133,9 @@
       -5.7
     ],
     "flagImage": "https://flagcdn.com/sh.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "KN",
@@ -4787,7 +5157,9 @@
       -62.75
     ],
     "flagImage": "https://flagcdn.com/kn.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "LC",
@@ -4809,7 +5181,9 @@
       -60.96666666
     ],
     "flagImage": "https://flagcdn.com/lc.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "MF",
@@ -4836,7 +5210,9 @@
       -63.95
     ],
     "flagImage": "https://flagcdn.com/mf.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "PM",
@@ -4858,7 +5234,9 @@
       -56.33333333
     ],
     "flagImage": "https://flagcdn.com/pm.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "VC",
@@ -4880,7 +5258,9 @@
       -61.2
     ],
     "flagImage": "https://flagcdn.com/vc.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "WS",
@@ -4903,7 +5283,9 @@
       -172.33333333
     ],
     "flagImage": "https://flagcdn.com/ws.svg",
-    "level": 1
+    "level": 1,
+    "category": "oceania",
+    "placeType": "country"
   },
   {
     "code": "SM",
@@ -4927,7 +5309,9 @@
       12.41666666
     ],
     "flagImage": "https://flagcdn.com/sm.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "ST",
@@ -4949,7 +5333,9 @@
       7
     ],
     "flagImage": "https://flagcdn.com/st.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "SA",
@@ -4979,7 +5365,9 @@
       45
     ],
     "flagImage": "https://flagcdn.com/sa.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "SN",
@@ -5007,7 +5395,9 @@
       -14
     ],
     "flagImage": "https://flagcdn.com/sn.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "RS",
@@ -5038,7 +5428,9 @@
       21
     ],
     "flagImage": "https://flagcdn.com/rs.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "SC",
@@ -5061,7 +5453,9 @@
       55.66666666
     ],
     "flagImage": "https://flagcdn.com/sc.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "SL",
@@ -5086,7 +5480,9 @@
       -11.5
     ],
     "flagImage": "https://flagcdn.com/sl.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "SG",
@@ -5111,7 +5507,9 @@
       103.8
     ],
     "flagImage": "https://flagcdn.com/sg.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "SX",
@@ -5136,7 +5534,9 @@
       -63.05
     ],
     "flagImage": "https://flagcdn.com/sx.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "SK",
@@ -5164,7 +5564,9 @@
       19.5
     ],
     "flagImage": "https://flagcdn.com/sk.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "SI",
@@ -5191,7 +5593,9 @@
       14.81666666
     ],
     "flagImage": "https://flagcdn.com/si.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "SB",
@@ -5213,7 +5617,9 @@
       159
     ],
     "flagImage": "https://flagcdn.com/sb.svg",
-    "level": 1
+    "level": 1,
+    "category": "oceania",
+    "placeType": "country"
   },
   {
     "code": "SO",
@@ -5240,7 +5646,9 @@
       49
     ],
     "flagImage": "https://flagcdn.com/so.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "ZA",
@@ -5278,7 +5686,9 @@
       24
     ],
     "flagImage": "https://flagcdn.com/za.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "GS",
@@ -5300,7 +5710,9 @@
       -37
     ],
     "flagImage": "https://flagcdn.com/gs.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "SS",
@@ -5329,7 +5741,9 @@
       30
     ],
     "flagImage": "https://flagcdn.com/ss.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "ES",
@@ -5357,7 +5771,9 @@
       -4
     ],
     "flagImage": "https://flagcdn.com/es.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "LK",
@@ -5382,7 +5798,9 @@
       81
     ],
     "flagImage": "https://flagcdn.com/lk.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "SD",
@@ -5413,7 +5831,9 @@
       30
     ],
     "flagImage": "https://flagcdn.com/sd.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "SR",
@@ -5440,7 +5860,9 @@
       -56
     ],
     "flagImage": "https://flagcdn.com/sr.svg",
-    "level": 1
+    "level": 1,
+    "category": "south-america",
+    "placeType": "country"
   },
   {
     "code": "SJ",
@@ -5462,7 +5884,9 @@
       20
     ],
     "flagImage": "https://flagcdn.com/sj.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "SZ",
@@ -5488,7 +5912,9 @@
       31.5
     ],
     "flagImage": "https://flagcdn.com/sz.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "SE",
@@ -5513,7 +5939,9 @@
       15
     ],
     "flagImage": "https://flagcdn.com/se.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "CH",
@@ -5544,7 +5972,9 @@
       8
     ],
     "flagImage": "https://flagcdn.com/ch.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "SY",
@@ -5572,7 +6002,9 @@
       38
     ],
     "flagImage": "https://flagcdn.com/sy.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "TW",
@@ -5594,7 +6026,9 @@
       121
     ],
     "flagImage": "https://flagcdn.com/tw.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "TJ",
@@ -5622,7 +6056,9 @@
       71
     ],
     "flagImage": "https://flagcdn.com/tj.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "TZ",
@@ -5654,7 +6090,9 @@
       35
     ],
     "flagImage": "https://flagcdn.com/tz.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "TH",
@@ -5681,7 +6119,9 @@
       100
     ],
     "flagImage": "https://flagcdn.com/th.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "TL",
@@ -5705,7 +6145,9 @@
       125.91666666
     ],
     "flagImage": "https://flagcdn.com/tl.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "TG",
@@ -5731,7 +6173,9 @@
       1.16666666
     ],
     "flagImage": "https://flagcdn.com/tg.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "TK",
@@ -5753,7 +6197,9 @@
       -172
     ],
     "flagImage": "https://flagcdn.com/tk.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "TO",
@@ -5776,7 +6222,9 @@
       -175
     ],
     "flagImage": "https://flagcdn.com/to.svg",
-    "level": 1
+    "level": 1,
+    "category": "oceania",
+    "placeType": "country"
   },
   {
     "code": "TT",
@@ -5798,7 +6246,9 @@
       -61
     ],
     "flagImage": "https://flagcdn.com/tt.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "TN",
@@ -5823,7 +6273,9 @@
       9
     ],
     "flagImage": "https://flagcdn.com/tn.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "TR",
@@ -5854,7 +6306,9 @@
       35
     ],
     "flagImage": "https://flagcdn.com/tr.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "TM",
@@ -5882,7 +6336,9 @@
       60
     ],
     "flagImage": "https://flagcdn.com/tm.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "TC",
@@ -5904,7 +6360,9 @@
       -71.58333333
     ],
     "flagImage": "https://flagcdn.com/tc.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "TV",
@@ -5926,7 +6384,9 @@
       178
     ],
     "flagImage": "https://flagcdn.com/tv.svg",
-    "level": 1
+    "level": 1,
+    "category": "oceania",
+    "placeType": "country"
   },
   {
     "code": "UG",
@@ -5955,7 +6415,9 @@
       32
     ],
     "flagImage": "https://flagcdn.com/ug.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "UA",
@@ -5985,7 +6447,9 @@
       32
     ],
     "flagImage": "https://flagcdn.com/ua.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "AE",
@@ -6010,7 +6474,9 @@
       54
     ],
     "flagImage": "https://flagcdn.com/ae.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "GB",
@@ -6034,7 +6500,9 @@
       -2
     ],
     "flagImage": "https://flagcdn.com/gb.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "UM",
@@ -6053,7 +6521,9 @@
     "borders": [],
     "coordinates": null,
     "flagImage": "https://flagcdn.com/um.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "US",
@@ -6078,7 +6548,9 @@
       -97
     ],
     "flagImage": "https://flagcdn.com/us.svg",
-    "level": 1
+    "level": 1,
+    "category": "north-america",
+    "placeType": "country"
   },
   {
     "code": "UY",
@@ -6103,7 +6575,9 @@
       -56
     ],
     "flagImage": "https://flagcdn.com/uy.svg",
-    "level": 1
+    "level": 1,
+    "category": "south-america",
+    "placeType": "country"
   },
   {
     "code": "UZ",
@@ -6132,7 +6606,9 @@
       64
     ],
     "flagImage": "https://flagcdn.com/uz.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "VU",
@@ -6156,7 +6632,9 @@
       167
     ],
     "flagImage": "https://flagcdn.com/vu.svg",
-    "level": 1
+    "level": 1,
+    "category": "oceania",
+    "placeType": "country"
   },
   {
     "code": "VA",
@@ -6183,7 +6661,9 @@
       12.45
     ],
     "flagImage": "https://flagcdn.com/va.svg",
-    "level": 1
+    "level": 1,
+    "category": "europe",
+    "placeType": "country"
   },
   {
     "code": "VE",
@@ -6209,7 +6689,9 @@
       -66
     ],
     "flagImage": "https://flagcdn.com/ve.svg",
-    "level": 1
+    "level": 1,
+    "category": "south-america",
+    "placeType": "country"
   },
   {
     "code": "VN",
@@ -6235,7 +6717,9 @@
       107.83333333
     ],
     "flagImage": "https://flagcdn.com/vn.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "VG",
@@ -6257,7 +6741,9 @@
       -64.62305
     ],
     "flagImage": "https://flagcdn.com/vg.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "VI",
@@ -6279,7 +6765,9 @@
       -64.93
     ],
     "flagImage": "https://flagcdn.com/vi.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "WF",
@@ -6301,7 +6789,9 @@
       -176.2
     ],
     "flagImage": "https://flagcdn.com/wf.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "EH",
@@ -6327,7 +6817,9 @@
       -13
     ],
     "flagImage": "https://flagcdn.com/eh.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   },
   {
     "code": "YE",
@@ -6352,7 +6844,9 @@
       48
     ],
     "flagImage": "https://flagcdn.com/ye.svg",
-    "level": 1
+    "level": 1,
+    "category": "asia",
+    "placeType": "country"
   },
   {
     "code": "ZM",
@@ -6383,7 +6877,9 @@
       30
     ],
     "flagImage": "https://flagcdn.com/zm.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "ZW",
@@ -6412,7 +6908,9 @@
       30
     ],
     "flagImage": "https://flagcdn.com/zw.svg",
-    "level": 1
+    "level": 1,
+    "category": "africa",
+    "placeType": "country"
   },
   {
     "code": "AX",
@@ -6434,6 +6932,8 @@
       19.9
     ],
     "flagImage": "https://flagcdn.com/ax.svg",
-    "level": 1
+    "level": 1,
+    "category": "other",
+    "placeType": "other"
   }
 ]

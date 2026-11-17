@@ -172,7 +172,7 @@
           <div class="field">
             <label for="regionFilter">Verdensdel</label>
             <select id="regionFilter">
-              <option value="all">Hele verden</option>
+              <option value="all">Alle land og steder</option>
             </select>
           </div>
         </div>
@@ -208,6 +208,10 @@
         </div>
 
         <div class="map-toolbar">
+          <label class="map-region-field" for="mapRegionFilter">
+            Verdensdel
+            <select id="mapRegionFilter"><option value="all">Alle land og steder</option></select>
+          </label>
           <label class="map-mode-field" for="mapMode">
             Kartmodus
             <select id="mapMode">
@@ -226,12 +230,13 @@
         </div>
 
         <div id="worldMap" class="world-map" role="application" aria-label="Interaktivt verdenskart"></div>
+        <button type="button" id="mapExitButton" class="map-exit-button" aria-label="Tilbake til hjem">←</button>
 
         <p id="mapFeedback" class="map-feedback" aria-live="polite">
           Tips: Du kan zoome med musehjulet eller knipe på mobil.
         </p>
 
-        <div class="map-selected" id="mapSelected">
+        <div class="map-selected" id="mapSelected" hidden>
           <span>🌐</span>
           <span>Velg et land på kartet for å se detaljer.</span>
         </div>
@@ -270,7 +275,7 @@
           </label>
 
           <select id="explorerRegion" aria-label="Filtrer etter verdensdel">
-            <option value="all">Alle verdensdeler</option>
+            <option value="all">Alle land og steder</option>
           </select>
         </div>
 

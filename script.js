@@ -29,7 +29,8 @@ const elements = {
   countryDetails: document.getElementById("countryDetails"), countryCount: document.getElementById("countryCount"),
   mapMode: document.getElementById("mapMode"), mapQuizPrompt: document.getElementById("mapQuizPrompt"),
   mapNextButton: document.getElementById("mapNextButton"), mapFeedback: document.getElementById("mapFeedback"),
-  mapSelected: document.getElementById("mapSelected")
+  mapSelected: document.getElementById("mapSelected"),
+  mapRegionFilter: document.getElementById("mapRegionFilter")
 };
 
 const easyCodes = new Set(["NO","SE","DK","FI","IS","US","CA","BR","GB","FR","DE","IT","ES","JP","CN","AU","IN","RU","EG","MX","NL","CH","GR","PT","IE","PL","TR","KR","AR","NZ"]);
@@ -69,15 +70,28 @@ function updateStats() {
   elements.reviewButton.textContent = `Start repetisjon (${stats.mistakes.length})`;
 }
 
+const categoryNames = {
+  all: "Alle land og steder",
+  africa: "Afrika",
+  asia: "Asia",
+  europe: "Europa",
+  "north-america": "Nord-Amerika",
+  "south-america": "Sør-Amerika",
+  oceania: "Oseania",
+  other: "Annet (territorier og områder)"
+};
+const categoryOrder = ["africa", "asia", "europe", "north-america", "south-america", "oceania", "other"];
+
+function countryMatchesCategory(country, category) {
+  return category === "all" || country.category === category;
+}
+
 function populateRegionFilters() {
-  const regions = [...new Set(countries.map(c => c.region).filter(Boolean))].sort((a,b) => (regionNames[a] || a).localeCompare(regionNames[b] || b, "no"));
-  regions.forEach(region => {
-    const label = regionNames[region] || region;
-    [elements.regionFilter, elements.explorerRegion].forEach(select => {
-      const option = document.createElement("option");
-      option.value = region;
-      option.textContent = label;
-      select.appendChild(option);
+  [elements.regionFilter, elements.explorerRegion, elements.mapRegionFilter].forEach(select => {
+    if (!select) return;
+    select.replaceChildren(new Option(categoryNames.all, "all"));
+    categoryOrder.forEach(category => {
+      select.add(new Option(categoryNames[category], category));
     });
   });
 }
@@ -90,7 +104,7 @@ function getCountryPool() {
 
   // Hovedstadquizen skal aldri vise tomme eller ukjente hovedsteder.
   if (mode === "capital") pool = pool.filter(country => country.capital && country.capital !== "Ukjent");
-  if (region !== "all") pool = pool.filter(country => country.region === region);
+  pool = pool.filter(country => countryMatchesCategory(country, region));
 
   if (difficulty === "easy") {
     pool = pool.filter(country => easyCodes.has(country.code));
@@ -250,7 +264,7 @@ function renderExplorer() {
   const region = elements.explorerRegion.value;
   const filtered = countries.filter(country => {
     const searchable = [country.name, country.capital, country.currency, ...(country.languages || [])].filter(Boolean).join(" ").toLocaleLowerCase("no");
-    return (region === "all" || country.region === region) && (!query || searchable.includes(query));
+    return countryMatchesCategory(country, region) && (!query || searchable.includes(query));
   }).sort((a,b) => a.name.localeCompare(b.name, "no"));
 
   elements.countryCount.textContent = `${filtered.length} av ${countries.length} oppføringer`;
@@ -270,7 +284,7 @@ function renderExplorer() {
     const flag = createFlagImage(country, "country-flag");
     const text = document.createElement("span");
     const name = document.createElement("span"); name.className = "country-name"; name.textContent = country.name;
-    const regionLabel = document.createElement("span"); regionLabel.className = "country-region"; regionLabel.textContent = regionNames[country.region] || country.region || "Region ikke oppgitt";
+    const regionLabel = document.createElement("span"); regionLabel.className = "country-region"; regionLabel.textContent = country.category === "other" ? "Annet · " + (regionNames[country.region] || country.region) : categoryNames[country.category] || "Region ikke oppgitt";
     text.append(name, regionLabel); button.append(flag, text);
     button.addEventListener("click", () => {
       selectedExplorerCode = country.code;
@@ -326,7 +340,7 @@ function renderCountryDetails(country) {
   const top = document.createElement("div"); top.className = "detail-top";
   const flag = createFlagImage(country, "detail-flag-image");
   const title = document.createElement("h3"); title.textContent = country.name;
-  const region = document.createElement("p"); region.textContent = `${regionNames[country.region] || country.region || "Region ikke oppgitt"}${country.subregion ? ` · ${country.subregion}` : ""}`;
+  const region = document.createElement("p"); region.textContent = `${categoryNames[country.category] || "Region ikke oppgitt"}${country.subregion ? ` · ${country.subregion}` : ""}`;
   top.append(flag, title, region);
   const rows = [
     ["Hovedstad", country.capital && country.capital !== "Ukjent" ? country.capital : "Ikke oppgitt"],
@@ -468,7 +482,18 @@ function renderMapCountry(country) {
   const facts = document.createElement("span");
   facts.textContent = ` · ${country.capital && country.capital !== "Ukjent" ? country.capital : "Hovedstad ikke oppgitt"} · ${regionNames[country.region] || country.region || "Region ukjent"}`;
   details.append(name, facts);
-  elements.mapSelected.append(flag, details);
+  const close = document.createElement("button");
+  close.type = "button";
+  close.className = "map-popup-close";
+  close.textContent = "×";
+  close.setAttribute("aria-label", "Lukk landinformasjon");
+  close.addEventListener("click", () => {
+    elements.mapSelected.hidden = true;
+    selectedMapCode = null;
+    refreshMapStyles();
+  });
+  elements.mapSelected.append(flag, details, close);
+  elements.mapSelected.hidden = false;
   selectedExplorerCode = country.code;
   renderCountryDetails(country);
 }
@@ -511,7 +536,8 @@ function handleMapCountryClick(code, mapName) {
 }
 
 function startMapQuiz() {
-  const candidates = countries.filter(country => mapFeaturesByCode.has(country.code) && country.name && country.region !== "Polar" && country.region !== "Antarctic Ocean");
+  const category = elements.mapRegionFilter?.value || "all";
+  const candidates = countries.filter(country => mapFeaturesByCode.has(country.code) && country.name && countryMatchesCategory(country, category));
   if (!candidates.length) {
     showMapError("Fant ingen land som kan brukes i kartquizen.");
     return;
@@ -520,6 +546,7 @@ function startMapQuiz() {
   mapQuizAnswered = false;
   mapQuizWrongCode = null;
   selectedMapCode = null;
+  elements.mapSelected.hidden = true;
   elements.mapQuizPrompt.textContent = `Finn ${mapQuizTarget.name} på kartet`;
   elements.mapFeedback.textContent = "Trykk på landet du tror er riktig.";
   elements.mapFeedback.className = "map-feedback";
@@ -533,6 +560,7 @@ function updateMapMode() {
   elements.mapQuizPrompt.textContent = quizMode ? "Gjør deg klar til å finne et land …" : "Velg et land på kartet for å utforske det.";
   elements.mapFeedback.textContent = quizMode ? "Finn landet som vises øverst." : "Trykk på et land for å se informasjon.";
   elements.mapFeedback.className = "map-feedback";
+  elements.mapSelected.hidden = true;
   if (quizMode) startMapQuiz();
   else {
     mapQuizTarget = null;
@@ -585,6 +613,8 @@ function showView(viewId) {
   }
   if (viewId === "mapView") {
     updateMapInterface();
+  } else {
+    elements.mapSelected.hidden = true;
   }
 }
 
@@ -631,6 +661,8 @@ mobileNavButtons.forEach(button => {
         mapOpenedAsQuiz = false;
 
         elements.mapMode.value = "explore";
+        elements.mapSelected.hidden = true;
+        selectedMapCode = null;
         updateMapMode();
         }
 
@@ -698,6 +730,10 @@ elements.reviewButton.addEventListener("click", () => {
 elements.countrySearch.addEventListener("input", renderExplorer);
 elements.explorerRegion.addEventListener("change", renderExplorer);
 elements.mapMode.addEventListener("change", updateMapMode);
+elements.mapRegionFilter.addEventListener("change", () => {
+  if (elements.mapMode.value === "quiz") startMapQuiz();
+});
+document.getElementById("mapExitButton").addEventListener("click", () => showView("homeView"));
 elements.mapNextButton.addEventListener("click", startMapQuiz);
 
 loadCountries().catch(error => {
@@ -729,6 +765,7 @@ if ("serviceWorker" in navigator) {
 function updateMapInterface() {
     const mapSection = document.getElementById("mapView");
     const modeField = document.querySelector("#mapView .map-mode-field");
+    const regionField = document.querySelector("#mapView .map-region-field");
     const nextButton = document.getElementById("mapNextButton");
 
     if (!mapSection) return;
@@ -740,6 +777,7 @@ function updateMapInterface() {
     mapSection.classList.toggle("map-quiz-active", !exploreOnly);
 
     // Skjul modusvelgeren når kartet åpnes fra bunnmenyen
+    if (regionField) regionField.hidden = exploreOnly;
     if (modeField) {
         modeField.style.setProperty(
             "display",
